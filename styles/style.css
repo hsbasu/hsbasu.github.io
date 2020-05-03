@@ -1,11 +1,12 @@
 html {
 	font-family: 'Open Sans', sans-serif;
-	/*background-color: powderblue;*/
+	background-color: powderblue;
 }
 
 * {
     box-sizing: border-box;
 }
+
 body {
 	margin: 0 auto;
 	text-align: justified;
@@ -14,71 +15,80 @@ body {
 
 /* Style the header */
 header {
-    background-color: #7FFF00;
-    padding: 10px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
+	padding: 1px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
 }
+
+/* Style the navigation bar */
+nav {
+	background-color: #7FFF00;
+	font-size: 35px;
+	color: white;
+}
+
+ul#nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 5;
+	overflow: hidden;
+	background-color: #7FFF00;
+}
+
+a#nav {
+	display: block;
+	color: black;
+	padding: 15px;
+	text-decoration: none;
+	float: left;
+	font-size: 20px;
+}
+
+ul a:hover#nav {
+	background-color: #00008B;
+	color: white;
+}
+
 /* Create two columns/boxes that floats next to each other */
-sidebar {
-    float: left;
-    width: 20%;
-    background: #ccc;
-    padding: 20px;
+aside {
+	background-color: #2C001E;
+	float: left;
+	width: 20%;
+	padding: 20px;
+	color: #7FFF00;
 }
 
 /* Style the list inside the menu */
-sidebar ul {
-    list-style-type: none;
-    padding: 0;
+aside ul {
+	list-style-type: none;
+	padding: 5px;
 }
 
 article {
-    float: left;
-    padding: 20px;
-    width: 80%;
-    background-color: #f1f1f1;
+	float: right;
+	padding: 20px;
+	width: 80%;
+	background-color: #f1f1f1;
 }
 
 /* Clear floats after the columns */
 section:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /* Style the footer */
 footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-ul#header {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #0000FF;
-}
-
-a#header {
-    display: block;
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    float: left;
-	font-size: 20px;
-}
-
-li a:hover#header {
-    background-color: #00008B;
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: white;
 }
 
 p, li {
-	font-size: 16px;    
+	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 1px;
 }
