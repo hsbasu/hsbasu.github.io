@@ -1,45 +1,88 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>My Website</title>
-		<link href="styles/style.css" rel="stylesheet" type="text/css">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<header>
-			<h3>Logo</h3>
-		</header>
-		<nav>
-			<ul id="nav">
-				<li><a id="nav" href="index.html">Home</a></li>
-				<li><a id="nav" href="research.html">Research</a></li>
-				<li><a id="nav" href="publications.html">Publications</a></li>
-				<li><a id="nav" href="aboutme.html">About Me</a></li>
-			<ul>
-		</nav>
-		<section>
-			<aside>
-				<p>News</p>
-			</aside>
-			<article>
-				<img src="images/sigma_E380_posner.gif" height="165" width="542" alt="EKI">
-				<h2> Research Diary by Himadri </h2>
-				<p> At present, I am experimenting on
-					<a href='https://wins.engr.wisc.edu/teaching/mpfBook/node26.html'> <strong>Pool Boiling</strong>.</a> Objective of this research is to enhance
-					<a href='https://en.wikipedia.org/wiki/Critical_heat_flux'> <em>critical heat flux</em>(CHF)</a> in pool boiling applications. Enhancement of CHF can be performed in a number of ways.</p>
-					<ul>
-						<li>Surface Modification</li>
-						<li>Nano-fluid addition</li>
-					</ul>
-				<p>Surface modifications are done by providing nano-particle coating of different thickness, and externally installed structures.</p>
-				<script src="scripts/main.js"></script>
-			</article>
-		</section>
-		<footer>
-		  <p>Footer</p>
-		</footer>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header>
+      <div class="bar">
+        <a style="width:50%" href="https://sourceforge.net/projects/freedom-os" target="_blank">
+          <img style="float:right" src="images/freedomos-logo.png" height="100" alt="freedomOS-logo">
+        </a>
+        <a style="width:50%" href="https://www.iitbbs.ac.in" target="_blank">
+          <img style="float:left" src="images/iitbbs.png" height="100" alt="iitbbs-logo">
+        </a>
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <div class="bar">
+        <a class="bar-item" href="index.html" style="width:20%">Home</a>
+        <a class="bar-item" href="research.html" style="width:20%">Research</a>
+        <a class="bar-item" href="publications.html" style="width:20%">Publications</a>
+        <a class="bar-item" href="hobby.html" style="width:20%">Fun Projects</a>
+        <a class="bar-item w3-right" href="aboutme.html" style="width:20%">About Me</a>
+      </div>
+    </nav>
+
+    <section>
+      <!-- SIDEBAR -->
+      <aside>
+        <p>News</p>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <article>
+        <img src="images/sigma_E380_posner.gif" height="165" width="542" alt="EKI">
+        <h2> Research Diary by Himadri </h2>
+        <p> At present, I am experimenting on
+          <a href='https://wins.engr.wisc.edu/teaching/mpfBook/node26.html'> <strong>Pool Boiling</strong>.</a> Objective of this research is to enhance
+          <a href='https://en.wikipedia.org/wiki/Critical_heat_flux'> <em>critical heat flux</em>(CHF)</a> in pool boiling applications. Enhancement of CHF can be performed in a number of ways.</p>
+          <ul>
+            <li>Surface Modification</li>
+            <li>Nano-fluid addition</li>
+          </ul>
+        <p>Surface modifications are done by providing nano-particle coating of different thickness, and externally installed structures.</p>
+        <script src="scripts/main.js"></script>
+      </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="bar">
+          <a class="services" href="https://twitter.com/hsbasu">
+            <img src="./images/twitter.png" alt="Logo for Twitter">
+          </a>
+          <a class="services" href="skype:live:hsbasu">
+            <img src="./images/skype.png" alt="Logo for Skype">
+          </a>
+          <a class="services" href="https://www.linkedin.com/in/hsbasu" target="_blank">
+            <img src="./images/linkedin.png" alt="Logo for LinkedIN">
+          </a>
+          <a class="services" href="https://github.com/hsbasu">
+            <img src="./images/github.png" alt="Logo for Github">
+          </a>
+          <a class="services" href="https://www.facebook.com/bhimadri" target="_blank">
+            <img src="./images/facebook.png" alt="Logo for Facebook">
+          </a>
+          <a class="services" href="mailto:hsb10@iitbbs.ac.in">
+            <img src="./images/email.png" alt="Logo for Email">
+          </a>
+          <a class="services" href="https://hsbasu.github.io" target="_blank">
+            <img src="./images/site.png" alt="Logo for Site">
+          </a>
+          <!--<a class="services" href="https://plus.google.com/+ArchismanPanigrahi1/">
+            <img src="./images/google-plus.png" alt="Logo for Google Plus">
+          </a> -->
+      </div>
+    </footer>
+  </body>
 </html>
