@@ -1,37 +1,72 @@
 html {font-family: 'Open Sans', sans-serif;}
 *{box-sizing: border-box;}
-body {background-color: powderblue;margin: 0 auto;text-align: justified;padding: 0 20px 20px 20px;}
+body {background-color: powderblue;margin: 0 auto;text-align: justified;padding: 10px 10px 10px 10px;}
 
 /* Style the header */
-header {padding: 1px;text-align: center;font-size: 20px;color: white;}
+header {padding: 2vw;}
 
 /* Style the navigation bar */
-nav {font-size: 35px;color: white;background-color: #7FFF00;overflow: auto;}
+nav {color: white;background-color: #7FFF00;}
 
 /* Create two columns/boxes that floats next to each other */
 aside {background-color: #2C001E;float: left;width: 20%;padding: 20px;color: #7FFF00;}
 
-.w3-left{float:left!important}.w3-right{float:right!important}
-.bar {width:100%;overflow:hidden} /*{color: black;padding: 15px;font-size: 20px;}*/
-.bar .bar-item{padding:16px 16px;float:left;width:auto;border:none;display:block;outline:0;text-decoration: none;}
+/* Style the footer */
+footer {background-color: #777;padding: 5px;color: #7FFF00;}
+
+.w3-left{float:left!important}.w3-right{float:right!important}.center{float:center!important}
+
+.bar {width: 100%;overflow: auto} /*{color: black;padding: 15px;font-size: 20px;}*/
+.bar .bar-item{padding: 10px 10px;float: left;width: 20%;border: none;display: block;outline: 0;text-decoration: none;}
 :hover.bar-item {background-color: #00008B;color: white;}
 
 /* Style the list inside the menu */
 aside ul {list-style-type: none;padding: 5px;}
 
-article {float: right;padding: 20px;width: 80%;background-color: #f1f1f1;}
+article {float: right;padding: 10px;width: 80%;background-color: #f1f1f1;}
 
 /* Clear floats after the columns */
 section:after {content: "";display: table;clear: both;}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 /* Style the footer */
 footer {background-color: #777;padding: 10px;/*text-align: center;*/color: white;}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 .services, .hidden {opacity: 0.1;}
 a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 15px;}
+=======
+<<<<<<< HEAD
+.services li, a {float: right;padding: 15px;}
+=======
+
+>>>>>>> 2edd331... Updated on 28 May, 2020
+.services, .hidden {opacity: 0.1;}
+a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;}
+
+.services, .hidden {opacity: 0.1;}
+a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 15px;}
+<<<<<<< HEAD
+>>>>>>> Updated on 28 May, 2020
+>>>>>>> 2e1aa75... Updated on 28 May, 2020
+=======
+=======
+.services, .hidden {opacity: 0.5;}
+=======
+.services, .hidden {opacity: 0.5;width: 10vw;}
+>>>>>>> a66f166... Updated on 28 May, 2020
+a.services {display: inline-block;float: right;padding: 5px;}
+>>>>>>> 39d9dae... Updated on 28 May, 2020
+
+>>>>>>> 2edd331... Updated on 28 May, 2020
 a:hover.services {opacity: 1;}
 
-p, li {font-size: 16px;line-height: 1.5;letter-spacing: 1px;}
+h1 {font-size: 2.5vw;}
+h2 {font-size: 2.25vw;}
+h3 {font-size: 2vw;}
+p, li {font-size: 1.5vw;line-height: 1.5;letter-spacing: 1px;}
 img {display: block;margin: 0 auto;}
 
 
