@@ -27,9 +27,14 @@ section:after {content: "";display: table;clear: both;}
 /* Style the footer */
 footer {background-color: #777;padding: 10px;/*text-align: center;*/color: white;}
 
+<<<<<<< HEAD
 .services li, a {float: right;padding: 15px;}
 .services, .hidden {opacity: 0.1;}
 a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;}
+=======
+.services, .hidden {opacity: 0.1;}
+a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 15px;}
+>>>>>>> Updated on 28 May, 2020
 a:hover.services {opacity: 1;}
 
 p, li {font-size: 16px;line-height: 1.5;letter-spacing: 1px;}
