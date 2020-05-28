@@ -28,7 +28,7 @@ article {float: right;padding: 10px;width: 80%;background-color: #f1f1f1;}
 /* Clear floats after the columns */
 section:after {content: "";display: table;clear: both;}
 
-.services, .hidden {opacity: 0.5;}
+.services, .hidden {opacity: 0.5;width: 10vw;}
 a.services {display: inline-block;float: right;padding: 5px;}
 
 a:hover.services {opacity: 1;}
