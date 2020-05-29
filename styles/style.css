@@ -3,21 +3,21 @@ html {font-family: 'Open Sans', sans-serif;}
 body {background-color: powderblue;margin: 0 auto;text-align: justified;padding: 10px 10px 10px 10px;}
 
 /* Style the header */
-header {padding: 2vw;}
+header {padding: 1vw;}
 
 /* Style the navigation bar */
 nav {color: white;background-color: #7FFF00;}
 
 /* Create two columns/boxes that floats next to each other */
-aside {background-color: #2C001E;float: left;width: 20%;padding: 20px;color: #7FFF00;}
+aside {background-color: #2C001E;float: left;width: 20%;padding: 2vw;color: #7FFF00;}
 
 /* Style the footer */
-footer {background-color: #777;padding: 5px;color: #7FFF00;}
+footer {background-color: #666;padding: 10px;color: #7FFF00;}
 
 .w3-left{float:left!important}.w3-right{float:right!important}.center{float:center!important}
 
-.bar {width: 100%;overflow: auto} /*{color: black;padding: 15px;font-size: 20px;}*/
-.bar .bar-item{padding: 10px 10px;float: left;width: 20%;border: none;display: block;outline: 0;text-decoration: none;}
+.bar {width: 100%;overflow: auto;} /*{color: black;padding: 15px;font-size: 20px;}*/
+.bar .bar-item{padding: 5px 5px;float: left;width: 20%;border: none;display: block;outline: 0;text-decoration: none;text-align:center;}
 :hover.bar-item {background-color: #00008B;color: white;}
 
 /* Style the list inside the menu */
@@ -28,6 +28,7 @@ article {float: right;padding: 10px;width: 80%;background-color: #f1f1f1;}
 /* Clear floats after the columns */
 section:after {content: "";display: table;clear: both;}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /* Style the footer */
@@ -57,6 +58,9 @@ a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;p
 =======
 .services, .hidden {opacity: 0.5;width: 10vw;}
 >>>>>>> a66f166... Updated on 28 May, 2020
+=======
+.services, .hidden {opacity: 0.5;}
+>>>>>>> 614c452... Updated on 29 May, 2020
 a.services {display: inline-block;float: right;padding: 5px;}
 >>>>>>> 39d9dae... Updated on 28 May, 2020
 
