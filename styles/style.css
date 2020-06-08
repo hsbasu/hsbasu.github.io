@@ -17,8 +17,9 @@ footer {background-color: #666;padding: 10px;color: #7FFF00;}
 .w3-left{float:left!important}.w3-right{float:right!important}.center{float:center!important}
 
 .bar {width: 100%;overflow: auto;} /*{color: black;padding: 15px;font-size: 20px;}*/
-.bar .bar-item{padding: 5px 5px;float: left;width: 20%;border: none;display: block;outline: 0;text-decoration: none;text-align:center;}
+.bar .bar-item{padding: 10px 10px; float: left; width: 20%;border: 5px; display: block;outline: 0;text-decoration: none;text-align:center;}
 :hover.bar-item {background-color: #00008B;color: white;}
+.stickey {position: -webkit-sticky;  position: sticky; top: 0;}
 
 /* Style the list inside the menu */
 aside ul {list-style-type: none;padding: 5px;}
