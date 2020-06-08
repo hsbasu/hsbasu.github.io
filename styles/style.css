@@ -3,23 +3,24 @@ html {font-family: 'Open Sans', sans-serif;}
 body {background-color: powderblue;margin: 0 auto;text-align: justified;padding: 10px 10px 10px 10px;}
 
 /* Style the header */
-header {padding: 1vw;}
+header {padding: 5px;}
 
 /* Style the navigation bar */
-nav {color: white;background-color: #7FFF00;}
+nav {color: white;background-color: #7FFF00; padding: 5px;}
 
 /* Create two columns/boxes that floats next to each other */
-aside {background-color: #2C001E;float: left;width: 20%;padding: 2vw;color: #7FFF00;}
+aside {background-color: #2C001E;float: left;width: 20%;padding: 5px;color: #7FFF00;}
 
 /* Style the footer */
-footer {background-color: #666;padding: 10px;color: #7FFF00;}
+footer {background-color: #666;padding: 5px;color: #7FFF00;}
 
 .w3-left{float:left!important}.w3-right{float:right!important}.center{float:center!important}
 
+.stickey {position: sticky; top: 0;}
 .bar {width: 100%;overflow: auto;} /*{color: black;padding: 15px;font-size: 20px;}*/
-.bar .bar-item{padding: 10px 10px; float: left; width: 20%;border: 5px; display: block;outline: 0;text-decoration: none;text-align:center;}
-:hover.bar-item {background-color: #00008B;color: white;}
-.stickey {position: -webkit-sticky;  position: sticky; top: 0;}
+.bar .bar-item{float: left; width: 20%; border: 5px; text-decoration: none; text-align:center;}
+:hover.bar-item {background-color: #00008B; color: white;}
+h1.item{ font-size: 1.25vw; display: block; outline: 0;}
 
 /* Style the list inside the menu */
 aside ul {list-style-type: none;padding: 5px;}
@@ -33,11 +34,11 @@ section:after {content: "";display: table;clear: both;}
 a.services {display: inline-block;float: right;padding: 5px;}
 
 .services, .hidden {opacity: 0.1;}
-a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 15px;}
+a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 5px;}
 a:hover.services {opacity: 1;}
 
-h1 {font-size: 2.5vw;}
-h2 {font-size: 2.25vw;}
-h3 {font-size: 2vw;}
-p, li {font-size: 1.5vw;line-height: 1.5;letter-spacing: 1px;}
+h1 {font-size: 1.5vw;}
+h2 {font-size: 1.2vw;}
+h3 {font-size: 1.1vw;}
+p, li {font-size: 1vw;line-height: 1.5;letter-spacing: 1px;}
 img {display: block;margin: 0 auto;}
