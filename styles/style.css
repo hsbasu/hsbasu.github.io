@@ -32,6 +32,11 @@ section:after {content: "";display: table;clear: both;}
 .services, .hidden {opacity: 0.5;}
 a.services {display: inline-block;float: right;padding: 5px;}
 
+<<<<<<< HEAD
+.services, .hidden {opacity: 0.1;}
+a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 15px;}
+=======
+>>>>>>> 141d9e161ed589dcf5fd97721d428b8d04d99ebe
 a:hover.services {opacity: 1;}
 
 h1 {font-size: 2.5vw;}
