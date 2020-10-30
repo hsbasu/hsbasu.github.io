@@ -37,8 +37,15 @@ a.services {display: inline-block;float: right;padding: 5px;}
 a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 5px;}
 a:hover.services {opacity: 1;}
 
-h1 {font-size: 1.5vw;}
-h2 {font-size: 1.2vw;}
-h3 {font-size: 1.1vw;}
-p, li {font-size: 0.8vw; line-height: 1.5;letter-spacing: 1px;}
+h1 {font-size: 2vw;}
+h2 {font-size: 1.7vw;}
+h3 {font-size: 1.5vw;}
+p, li {font-size: 1.2vw; line-height: 1.5;letter-spacing: 1.5px;}
 img {display: block;margin: 0 auto;}
+
+.line {
+	background: transparent url(images/styles/line.png) repeat-x;
+	height: 2px;
+	padding: 20px 0 0 0;
+	line-break: 0px;
+}
