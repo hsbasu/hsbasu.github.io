@@ -1,35 +1,38 @@
-html {font-family: 'Open Sans', sans-serif;}
+html {font-family: 'Open Sans', sans-serif; font-size: 100%;}
 *{box-sizing: border-box;}
-body {background-color: powderblue;margin: 0 auto;text-align: justified;padding: 10px 10px 10px 10px;}
+body {background-color: powderblue; margin: 5px; text-align: justify; padding: 10px 10px 10px 10px;}
 
 /* Style the header */
-header {padding: 5px;}
+header {padding: 0.5%;}
 
 /* Style the navigation bar */
-nav {color: white;background-color: #7FFF00; padding: 5px;}
+nav {color: white; background-color: #7FFF00; padding: 5px; width: 100%;}
 
 /* Create two columns/boxes that floats next to each other */
-aside {background-color: #2C001E;float: left;width: 20%;padding: 5px;color: #7FFF00;}
+aside {background-color: #2C001E; color: #7FFF00; float: left; width: 20%; padding: 5px;}
 
 /* Style the footer */
-footer {background-color: #666;padding: 5px;color: #7FFF00;}
+footer {background-color: #666; color: #7FFF00; padding: 5px; overflow: auto;}
 
-.w3-left{float:left!important}.w3-right{float:right!important}.center{float:center!important}
+.w3-left{float:left; width: auto; text-align: left;}
+.w3-right{float:right; width: auto; text-align: right;}
+.w3-center{margin: auto; text-align: center;}
 
 .stickey {position: sticky; top: 0;}
-.bar {width: 100%;overflow: auto;} /*{color: black;padding: 15px;font-size: 20px;}*/
-.bar .bar-item{float: left; width: 20%; border: 5px; text-decoration: none; text-align:center;}
-:hover.bar-item {background-color: #00008B; color: white;}
-h1.item{ font-size: 1.25vw; display: block; outline: 0;}
+.bar {overflow: auto;}
+a:hover.bar{background-color: unset;}
+.bar .bar-item{width: 19%; border: 5px; text-decoration: none; text-align: center;}
+a:hover.bar-item {background-color: #00008B; color: white;}
 
 /* Style the list inside the menu */
-aside ul {list-style-type: none;padding: 5px;}
+aside ul {list-style-type: none; padding: 5px;}
 
-article {float: right;padding: 10px;width: 80%;background-color: #f1f1f1;}
+article {float: right; padding: 10px; width: 70%; background-color: #f1f1f1;}
 
 /* Clear floats after the columns */
 section:after {content: "";display: table;clear: both;}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,12 +80,19 @@ a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;p
 a.services {display: inline-block;/*min-width: 15px;*/opacity: .5;float: right;padding: 5px;}
 >>>>>>> df4d140... Updated on 08 June 2020
 a:hover.services {opacity: 1;}
+=======
+a{padding: 2px; text-align: center; text-decoration: none; display: inline-block;}
+a:hover{opacity: 1; background-color: yellowgreen;}
 
-h1 {font-size: 2vw;}
-h2 {font-size: 1.7vw;}
-h3 {font-size: 1.5vw;}
-p, li {font-size: 1.2vw; line-height: 1.5;letter-spacing: 1.5px;}
-img {display: block;margin: 0 auto;}
+/* Footer styles */
+.services, .hidden {opacity: 0.7;}
+a.services {display: inline-block; padding: 5px;}
+img.services{width: 70%;}
+p.crights{font-size: 209%;}
+>>>>>>> ebf8ea6... Revamped the website.
+
+p, li {line-height: 1.5; letter-spacing: 1.5px;}
+img {display: block; margin: 0 auto;}
 
 .line {
 	background: transparent url(images/styles/line.png) repeat-x;
