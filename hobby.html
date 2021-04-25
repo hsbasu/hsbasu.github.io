@@ -12,25 +12,28 @@
 
     <!-- Begin Header -->
     <header>
-      <div class="bar">
-        <a class="w3-left" href="https://www.iitbbs.ac.in" target="_blank">
-          <img style="float:left" src="images/styles/iitbbs.png" height="100" alt="iitbbs-logo">
-        </a>
-        <a class="w3-right" href="https://sourceforge.net/projects/freedom-os" target="_blank">
-          <img src="images/styles/freedomos-logo.png" height="100" alt="freedomOS-logo">
-        </a>
+      <div class="w3-center">
+        <a class="bar" href="https://freedom-os.sourceforge.io" target="_blank">
+	        <picture>
+	          <source srcset="images/icons/freedom-logo.png" media="(max-width: 600px)">
+	          <source srcset="images/icons/freedom-small-logo.png">
+	          <img src="images/icons/freedom-small-logo.png" alt="freedom-logo">
+	        </picture>
+	      </a>
       </div>
     </header>
     <!-- End Header -->
 
     <!-- Begin Navigation -->
-    <nav class="stickey">
+    <nav class="stickey bar">
       <div class="bar">
-        <a class="bar-item" href="index.html"><h1 class="item">Home</h1></a>
-        <a class="bar-item" href="research.html"><h1 class="item">Research</h1></a>
-        <a class="bar-item" href="publications.html"><h1 class="item">Publications</h1></a>
-        <a class="bar-item" href="hobby.html"><h1 class="item">Fun Projects</h1></a>
-        <a class="bar-item" href="aboutme.html"><h1 class="item">About Me</h1></a>
+				<h1 class="w3-center">
+          <a class="bar-item" href="index.html">Home</a>
+          <a class="bar-item" href="research.html">Research</a>
+          <a class="bar-item" href="publications.html">Publications</a>
+          <a class="bar-item" href="hobby.html">Fun Projects</a>
+          <a class="bar-item" href="aboutme.html">About Me</a>
+			</h1> 
       </div>
     </nav>
     <!-- Begin Navigation -->
@@ -45,7 +48,7 @@
       <!-- Begin Content -->
       <article>
         <h2>FreedomOS</h2>
-        <p>A respinned and themed Ubuntu Mate with utilities.</p>
+        <p>A respinned and themed Ubuntu Mate with utilities required for scientific projects.</p>
 
         <h2>Battery Monitor</h2>
         <p>Many a times we forget to remove the laptop charger. This can reduce the battery life significantly due to overcharge. I wrote a small bash script to remind me when the battery is full. It sends a notification through notify-send and plays a sound at a few seconds interval. Click below button to download the script.</p>
@@ -55,36 +58,37 @@
     </section>
 
     <!-- Begin Footer -->
-    <footer>
-      <div class="">
+    <footer class="bar">
+			<div class="w3-right">
+				<p class="w3-center">
           <a class="services" href="https://twitter.com/hsbasu">
-            <img src="images/styles/twitter.png" width="25vw" alt="Twitter">
+            <img class="services" src="images/icons/twitter.png" alt="Twitter">
           </a>
           <a class="services" href="skype:live:hsbasu">
-            <img src="./images/styles/skype.png" width="25vw" alt="Skype">
+            <img class="services" src="images/icons/skype.png" alt="Skype">
           </a>
           <a class="services" href="https://www.linkedin.com/in/hsbasu" target="_blank">
-            <img src="./images/styles/linkedin.png" width="25vw" alt="LinkedIN">
+            <img class="services" src="images/icons/linkedin.png" alt="LinkedIN">
           </a>
           <a class="services" href="https://github.com/hsbasu">
-            <img src="./images/styles/github.png" width="25vw" alt="Github">
+            <img class="services" src="images/icons/github.png" alt="Github">
           </a>
           <a class="services" href="https://www.facebook.com/bhimadri" target="_blank">
-            <img src="./images/styles/facebook.png" width="25vw" alt="Facebook">
+            <img class="services" src="images/icons/facebook.png" alt="Facebook">
           </a>
           <a class="services" href="mailto:hsb10@iitbbs.ac.in">
-            <img src="./images/styles/email.png" width="25vw" alt="Email">
+            <img class="services" src="images/icons/email.png" alt="Email">
           </a>
           <a class="services" href="https://hsbasu.github.io" target="_blank">
-            <img src="./images/styles/site.png" width="25vw" alt="Site">
+            <img class="services" src="images/icons/site.png" alt="Site">
           </a>
-          <!--
-            <a class="services" href="https://plus.google.com/+ArchismanPanigrahi1/">
-            <img src="./images/google-plus.png" alt="Logo for Google Plus">
-          </a>
-          -->
-          <p>&copy;2020 Himadri Sekhar Basu</p>
+				</p>
       </div>
+      <div class="w3-left">
+        <p class="crights w3-center">
+					&copy;2021 Himadri Sekhar Basu
+				</p>
+			</div>
     </footer>
     <!-- End Footer -->
   </body>
