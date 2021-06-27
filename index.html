@@ -20,13 +20,24 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 =======
     <link href="styles/css-styles/style.css" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
 >>>>>>> 61ad8b6... update styles
+=======
+    <link href="styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+>>>>>>> fcfdc7a... Increase responsiveness
   </head>
 
   <body>
+    <!-- Scripts -->
+    <script type="text/javascript" 
+      src="styles/scripts/navbar.js">
+    </script>
 
     <!-- Begin Header -->
     <header>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div class="bar">
@@ -65,6 +76,9 @@
         <a class="bar" href="https://freedom-os.sourceforge.io" target="_blank">
 =======
       <div class="w3-center bar">
+=======
+      <div class="w3-center">
+>>>>>>> fcfdc7a... Increase responsiveness
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
 >>>>>>> 61ad8b6... update styles
 	        <picture>
@@ -79,19 +93,30 @@
     <!-- End Header -->
 
     <!-- Begin Navigation -->
-    <nav class="stickey bar">
-      <div class="bar">
+    <nav class="stickey">
+      <div class="topnav bar" id="myTopnav">
 				<h1 class="w3-center">
           <a class="bar-item" href="index.html">Home</a>
           <a class="bar-item" href="research.html">Research</a>
           <a class="bar-item" href="publications.html">Publications</a>
-          <a class="bar-item" href="hobby.html">Fun Projects</a>
+          <div class="dropdown bar-item">
+            <a class="dropbtn" href="hobby.html">Fun Projects
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Linux Packages</a>
+              <a href="linux/tutorials.html">Tutorials</a>
+            </div>
+          </div>
           <a class="bar-item" href="aboutme.html">About Me</a>
+          <!-- Responsive navbar -->
+          <a href="javascript:void(0);" class="icon" onclick="topnavbar()">&#9776;</a>
 			  </h1>
       </div>
     </nav>
-    <!-- Begin Navigation -->
+    <!-- End Navigation -->
 
+<<<<<<< HEAD
     <section>
 <<<<<<< HEAD
       <!-- SIDEBAR -->
@@ -171,9 +196,35 @@
       </article>
       <!-- End Content -->
     </section>
+=======
+    <!-- Begin Sidebar -->
+    <div class="sidebar" id="newsbar">
+      <h3>News</h3>
+    </div>
+    <!-- End Sidebar -->
+    
+    <!-- Begin Content -->
+    <div class="article-content" id="articles">
+      <p align="center">
+        <img src="images/myworks/sigma_E380_posner.gif" alt="EKI">
+      </p>
+      <h2 align="center">Welcome to the showcase of my research!</h2>
+      <div class="line"></div>
+      
+      <p> At present, I am experimenting on <a href='https://wins.engr.wisc.edu/teaching/mpfBook/node26.html'> <strong>Pool Boiling</strong></a>. Objective of this research is to enhance <a href='https://en.wikipedia.org/wiki/Critical_heat_flux'> <em>critical heat flux</em>(CHF)</a> in pool boiling applications. Enhancement of CHF can be performed in a number of ways.</p>
+>>>>>>> fcfdc7a... Increase responsiveness
 
+      <ul>
+        <li>Surface Modification</li>
+        <li>Nano-fluid addition</li>
+      </ul>
+      <p>Surface modifications are done by providing nano-particle coating of different thickness, and externally installed structures.</p>
+      <script src="scripts/main.js"></script>
+    </div>
+    <!-- End Content -->
+    
     <!-- Begin Footer -->
-    <footer class="bar">
+    <footer class="w3-center bar">
 			<div class="w3-right">
 				<p class="services">
           <a class="services" href="https://twitter.com/hsbasu">

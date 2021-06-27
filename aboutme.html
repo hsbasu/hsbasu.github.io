@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link href="styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
+    <!-- Scripts -->
+    <script type="text/javascript" 
+      src="styles/scripts/navbar.js">
+    </script>
 
     <!-- Begin Header -->
     <header>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div class="bar">
@@ -49,6 +57,9 @@
         <a class="bar" href="https://freedom-os.sourceforge.io" target="_blank">
 =======
       <div class="w3-center bar">
+=======
+      <div class="w3-center">
+>>>>>>> fcfdc7a... Increase responsiveness
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
 >>>>>>> 61ad8b6... update styles
 	        <picture>
@@ -63,19 +74,30 @@
     <!-- End Header -->
 
     <!-- Begin Navigation -->
-    <nav class="stickey bar">
-      <div class="bar">
+    <nav class="stickey">
+      <div class="topnav bar" id="myTopnav">
 				<h1 class="w3-center">
           <a class="bar-item" href="index.html">Home</a>
           <a class="bar-item" href="research.html">Research</a>
           <a class="bar-item" href="publications.html">Publications</a>
-          <a class="bar-item" href="hobby.html">Fun Projects</a>
+          <div class="dropdown bar-item">
+            <a class="dropbtn" href="hobby.html">Fun Projects
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Linux Packages</a>
+              <a href="linux/tutorials.html">Tutorials</a>
+            </div>
+          </div>
           <a class="bar-item" href="aboutme.html">About Me</a>
+          <!-- Responsive navbar -->
+          <a href="javascript:void(0);" class="icon" onclick="topnavbar()">&#9776;</a>
 			  </h1>
       </div>
     </nav>
     <!-- End Navigation -->
 
+<<<<<<< HEAD
     <section>
       <!-- Begin Sidebar -->
       <aside>
@@ -108,11 +130,33 @@
         <p>I have hands on experience in <a href='https://en.wikipedia.org/wiki/Lattice_Boltzmann_methods'>
         lattice Boltzmann method</a>, <a href='https://en.wikipedia.org/wiki/Electrokinetic_phenomena'>electrokinetics</a>, and lattice Boltzmann modelling of electrokinetic instabilities.</p>
       </article>
+=======
+    <!-- Begin Sidebar -->
+    <div class="sidebar" id="newsbar">
+      <h3>News</h3>
+    </div>
+    <!-- End Sidebar -->
+    
+    <!-- Begin Content -->
+    <div class="article-content" id="articles">
+      <p align="center">
+        <img src="images/me.jpeg" style="width:30%;" alt="Me presenting at DSFD-2019">
+      </p>
+      <p align="center">
+        <img src="https://github-readme-stats.vercel.app/api?username=hsbasu&custom_title=My%20GitHub%20stats:&show_icons=true&theme=tokyonight&count_private=1" alt="My GitHub stats">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=hsbasu&langs_count=8&theme=tokyonight&layout=compact&bg_color=B0E0E6&text_color=2C001E" alt="Language Card">
+      </p>
+      <p>I am Himadri Sekhar Basu. At present, I am working as a JRF at <a href='https://www.iitbbs.ac.in/'>Indian Institute of Technology Bhubaneswar</a>. I went to <a href='https://jgec.ac.in/'>Jalpaiguri Government Engineering College</a> for my graduation in Mechanical Engineering from 2010 to 2014. I joined <a href='https://www.iitbbs.ac.in/'>IIT Bhubaneswar</a> as post-graduate student in Thermal Science and Engineering in 2015. After completing my M.Tech. in June,2017, I joined here as a JRF.</p>
+      <p>My career objective is to utilize my potential skills and knowledge, as a research scholar, in the best possible way towards the betterment and development of humanity by joining a research institute. To achieve this, in the near future, I want to acquire more knowledge on flow through microchannels. So, I am planning to join a doctoral program, where I can deepen my knowledge on this topic.</p>
+      <p>My research interest includes, but not limited to, Microfluidics, Electrokinetics, Flow Instabilities, Turbulence, Non-conventional Energy, Fuel cell, Heat Transfer, Experimental, and Numerical techniques in Fluid Mechanics.</p>
+      <p>I have hands on experience in <a href='https://en.wikipedia.org/wiki/Lattice_Boltzmann_methods'>
+      lattice Boltzmann method</a>, <a href='https://en.wikipedia.org/wiki/Electrokinetic_phenomena'>electrokinetics</a>, and lattice Boltzmann modelling of electrokinetic instabilities.</p>
+      </div>
+>>>>>>> fcfdc7a... Increase responsiveness
       <!-- End Content -->
-    </section>
 
     <!-- Begin Footer -->
-    <footer class="bar">
+    <footer class="w3-center bar">
 			<div class="w3-right">
 				<p class="services">
           <a class="services" href="https://twitter.com/hsbasu">
