@@ -24,6 +24,7 @@ overflow: hidden;
 }
 
 .dropdown .dropbtn {
+  color: blue;
 	font-size: inherit;
 	border: none;
 	outline: none;
