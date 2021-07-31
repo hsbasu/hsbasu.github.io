@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects I work on during leisure hours</title>
     <link href="styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   </head>
 
   <body>
+    <!-- Scripts -->
+    <script type="text/javascript" 
+      src="styles/scripts/navbar.js">
+    </script>
 
     <!-- Begin Header -->
     <header>
-      <div class="w3-center bar">
+      <div class="w3-center">
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
 	        <picture>
 	          <source srcset="styles/icons/freedom-logo.png" media="(max-width: 600px)">
@@ -24,40 +31,48 @@
     <!-- End Header -->
 
     <!-- Begin Navigation -->
-    <nav class="stickey bar">
-      <div class="bar">
+    <nav class="stickey">
+      <div class="topnav bar" id="myTopnav">
 				<h1 class="w3-center">
           <a class="bar-item" href="index.html">Home</a>
           <a class="bar-item" href="research.html">Research</a>
           <a class="bar-item" href="publications.html">Publications</a>
-          <a class="bar-item" href="hobby.html">Fun Projects</a>
+          <div class="dropdown bar-item">
+            <a class="dropbtn" href="hobby.html">Fun Projects
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Linux Packages</a>
+              <a href="linux/tutorials.html">Tutorials</a>
+            </div>
+          </div>
           <a class="bar-item" href="aboutme.html">About Me</a>
+          <!-- Responsive navbar -->
+          <a href="javascript:void(0);" class="icon" onclick="topnavbar()">&#9776;</a>
 			  </h1>
       </div>
     </nav>
     <!-- End Navigation -->
 
-    <section>
-      <!-- Begin Sidebar -->
-      <aside>
-        <h3>News</h3>
-      </aside>
-      <!-- End Sidebar -->
+    <!-- Begin Sidebar -->
+    <div class="sidebar" id="newsbar">
+      <h3>News</h3>
+    </div>
+    <!-- End Sidebar -->
 
-      <!-- Begin Content -->
-      <article>
-        <h2>FreedomOS</h2>
-        <p>A respinned and themed Ubuntu Mate with utilities required for scientific projects.</p>
+    <!-- Begin Content -->
+    <div class="article-content" id="articles">
+      <h2>FreedomOS</h2>
+      <p>A respinned and themed Ubuntu Mate with utilities required for scientific projects.</p>
 
-        <h2>Battery Monitor</h2>
-        <p>Many a times we forget to remove the laptop charger. This can reduce the battery life significantly due to overcharge. I wrote a small bash script to remind me when the battery is full. It sends a notification through notify-send and plays a sound at a few seconds interval. Click below button to download the script.</p>
-        <button type="button" onclick="myFunction()">Download</button>
-      </article>
-      <!-- End Content -->
-    </section>
+      <h2>Battery Monitor</h2>
+      <p>Many a times we forget to remove the laptop charger. This can reduce the battery life significantly due to overcharge. I wrote a small bash script to remind me when the battery is full. It sends a notification through notify-send and plays a sound at a few seconds interval. Click below button to download the script.</p>
+      <button type="button" onclick="myFunction()">Download</button>
+    </div>
+    <!-- End Content -->
 
     <!-- Begin Footer -->
-    <footer class="bar">
+    <footer class="w3-center bar">
 			<div class="w3-right">
 				<p class="services">
           <a class="services" href="https://twitter.com/hsbasu">

@@ -3,65 +3,80 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Publications in Journals and Conferences</title>
-      <link href="styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <title>Publications in Journals and Conferences</title>
+    <link href="styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   </head>
-
+  
   <body>
+    <!-- Scripts -->
+    <script type="text/javascript" 
+      src="styles/scripts/navbar.js">
+    </script>
 
     <!-- Begin Header -->
     <header>
-      <div class="w3-center bar">
+      <div class="w3-center">
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
-	        <picture>
-	          <source srcset="styles/icons/freedom-logo.png" media="(max-width: 600px)">
-	          <source srcset="styles/icons/freedom-small-logo.png">
-	          <img src="styles/icons/freedom-small-logo.png" alt="freedom-logo">
-	        </picture>
-	      </a>
+          <picture>
+            <source srcset="styles/icons/freedom-logo.png" media="(max-width: 600px)">
+            <source srcset="styles/icons/freedom-small-logo.png">
+            <img src="styles/icons/freedom-small-logo.png" alt="freedom-logo">
+          </picture>
+        </a>
       </div>
     </header>
     <!-- End Header -->
 
     <!-- Begin Navigation -->
-    <nav class="stickey bar">
-      <div class="bar">
-				<h1 class="w3-center">
+    <nav class="stickey">
+      <div class="topnav bar" id="myTopnav">
+        <h1 class="w3-center">
           <a class="bar-item" href="index.html">Home</a>
           <a class="bar-item" href="research.html">Research</a>
           <a class="bar-item" href="publications.html">Publications</a>
-          <a class="bar-item" href="hobby.html">Fun Projects</a>
+          <div class="dropdown bar-item">
+            <a class="dropbtn" href="hobby.html">Fun Projects
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Linux Packages</a>
+              <a href="linux/tutorials.html">Tutorials</a>
+            </div>
+          </div>
           <a class="bar-item" href="aboutme.html">About Me</a>
-			  </h1>
+          <!-- Responsive navbar -->
+          <a href="javascript:void(0);" class="icon" onclick="topnavbar()">&#9776;</a>
+        </h1>
       </div>
     </nav>
     <!-- End Navigation -->
 
-    <section>
-      <!-- Begin Sidebar -->
-      <aside>
-        <h3>News</h3>
-      </aside>
-      <!-- End Sidebar -->
+    <!-- Begin Sidebar -->
+    <div class="sidebar" id="newsbar">
+      <h3>News</h3>
+    </div>
+    <!-- End Sidebar -->
 
-      <!-- Begin Content -->
-      <article>
-        <h2>Thesis</h2>
-        <h2>Journal Articles</h2>
-        <p>
-          <ol>
-            <li>
-              <p style="color:red;">[2020]</p> Basu HS, Bahga SS, Kondaraju S. 2020 <strong>A fully coupled hybrid lattice Boltzmann and finite difference method-based study of transient electrokinetic flows.</strong> <i>Proc. R. Soc. A</i> <b>476</b>:20200423. doi: <a href="http://dx.doi.org/10.1098/rspa.2020.0423"> rspa.2020.0423 </a>
-            </li>
-          </ol>
-        </p>
-        <h2>Conferences</h2>
-      </article>
-      <!-- End Content -->
-    </section>
+    <!-- Begin Content -->
+    <div class="article-content" id="articles">
+      <h2>Thesis</h2>
+      <h2>Journal Articles</h2>
+      <p>
+        <ol>
+          <li>
+            <p style="color:red;">[2020]</p> Basu HS, Bahga SS, Kondaraju S. 2020 <strong>A fully coupled hybrid lattice Boltzmann and finite difference method-based study of transient electrokinetic flows.</strong> <i>Proc. R. Soc. A</i> <b>476</b>:20200423. doi: <a href="http://dx.doi.org/10.1098/rspa.2020.0423"> rspa.2020.0423 </a>
+          </li>
+        </ol>
+      </p>
+      <h2>Conferences</h2>
+    </div>
+    <!-- End Content -->
 
     <!-- Begin Footer -->
-    <footer class="bar">
+    <footer class="w3-center bar">
 			<div class="w3-right">
 				<p class="services">
           <a class="services" href="https://twitter.com/hsbasu">
