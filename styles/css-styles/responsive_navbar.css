@@ -24,7 +24,10 @@ overflow: hidden;
 }
 
 .dropdown .dropbtn {
+<<<<<<< HEAD
   color: blue;
+=======
+>>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
 	font-size: inherit;
 	border: none;
 	outline: none;

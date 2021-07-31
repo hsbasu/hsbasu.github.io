@@ -10,11 +10,19 @@ nav {background-color: #7FFF00; padding: 5px; width: 100%; border-radius: 10px;}
 
 /* Style the footer */
 footer {background-color: #666666; color: #7FFF00; padding: 5px; margin: 2px; margin-top: 50px; text-align: center; border-radius: 10px;}
+<<<<<<< HEAD
+=======
+
+/* Create two columns/boxes that floats next to each other */
+#newsbar {background-color: #2C001E; color: #7FFF00; width: 25%; margin: 2px; margin-top: 10px; padding: 10px; float: left; border-radius: 10px;}
+#articles {background-color: #f1f1f1; width: 73%; margin: 2px; margin-top: 10px; padding: 10px; float: left;}
+>>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
 
 /* Create two columns/boxes that floats next to each other */
 #newsbar {background-color: #2C001E; color: #7FFF00; width: 25%; margin: 2px; margin-top: 10px; padding: 10px; float: left; border-radius: 10px;}
 #articles {background-color: #f1f1f1; width: 73%; margin: 2px; margin-top: 10px; padding: 10px; float: left;}
 
+<<<<<<< HEAD
 .w3-left {float: left; text-align: left;}
 .w3-right {float: right; text-align: right;}
 .w3-center {margin: auto; width: 100%; text-align: center;}
@@ -22,6 +30,11 @@ footer {background-color: #666666; color: #7FFF00; padding: 5px; margin: 2px; ma
 .bar {overflow: auto;}
 a:hover.bar {background-color: unset;}
 
+=======
+.bar {overflow: auto;}
+a:hover.bar {background-color: unset;}
+
+>>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
 /* Style the list inside the menu */
 /* aside ul {list-style-type: none; padding: 5px;} */
 
@@ -36,10 +49,17 @@ img {display: block; margin: 5px;}
 
 /* social services at footer */
 img.services {margin: 0px;}
+<<<<<<< HEAD
 a.services {opacity: 0.5; padding: 0px;}
 a:hover.services {opacity: 1; background-color: unset; padding: 5px;}
 p.services {line-height: 0px; padding: 0px; margin: 2px;}
 p.crights {margin: 2px;}
+=======
+a.services{opacity: 0.5; padding: 0px;}
+a:hover.services{opacity: 1; background-color: unset; padding: 5px;}
+p.services{line-height: 0px; padding: 0px; margin: 2px;}
+p.crights{margin: 2px;}
+>>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
 
 /* Code snippets */
 code {background-color: #FDF6E3; color: black; padding: 5px; border-radius: 5px;}
