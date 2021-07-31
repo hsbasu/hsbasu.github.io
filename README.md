@@ -3,7 +3,12 @@ My personal website
 
 ## ToDo List
 1. [ ] Add github stats API.
-2. [ ] Add new links in hobby for battery-monitor and others.
+2. [x] Add new links in hobby for battery-monitor and others.
+3. [ ] Add github pages view counter.
+4. [ ] Add linux app screenshots
+5. [ ] Add Tutorial list
+	1. [ ] Create, update and sign .deb packages
+	2. [ ] Github usefull features
 
 ## References and Resources helped built this website
 
