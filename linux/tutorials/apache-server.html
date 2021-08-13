@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Tutorials</title>
+    <link href="https://hsbasu.github.io/styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  </head>
+  
+  <body>
+    <!-- Scripts -->
+    <script type="text/javascript" 
+      src="https://hsbasu.github.io/styles/scripts/navbar.js">
+    </script>
+    
+    <!-- Begin Header -->
+    <header>
+      <div class="w3-center">
+        <a class="bar" href="https://hsbasu.github.io" target="_blank">
+	        <picture>
+	          <source srcset="https://hsbasu.github.io/styles/icons/freedom-logo.png" media="(max-width: 600px)">
+	          <source srcset="https://hsbasu.github.io/styles/icons/freedom-small-logo.png">
+	          <img src="https://hsbasu.github.io/styles/icons/freedom-small-logo.png" alt="freedom-logo">
+	        </picture>
+	      </a>
+      </div>
+    </header>
+    <!-- End Header -->
+    
+    <!-- Begin Navigation -->
+    <nav class="stickey">
+      <div class="topnav bar" id="myTopnav">
+				<h1 class="w3-center">
+          <a class="bar-item" href="https://hsbasu.github.io/index.html">Home</a>
+          <a class="bar-item" href="https://hsbasu.github.io/research.html">Research</a>
+          <a class="bar-item" href="https://hsbasu.github.io/publications.html">Publications</a>
+          <div class="dropdown bar-item">
+            <a class="dropbtn" href="https://hsbasu.github.io/hobby.html">Fun Projects
+              <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="https://hsbasu.github.io/linux/packages.html">Linux Packages</a>
+              <a href="https://hsbasu.github.io/linux/tutorials.html">Tutorials</a>
+            </div>
+          </div>
+          <a class="bar-item" href="https://hsbasu.github.io/aboutme.html">About Me</a>
+          <!-- Responsive navbar -->
+          <a href="javascript:void(0);" class="icon" onclick="topnavbar()">&#9776;</a>
+			  </h1>
+      </div>
+    </nav>
+    <!-- End Navigation -->
+    
+    <!-- Begin Sidebar -->
+    <div class="sidebar" id="newsbar">
+      <h3>News</h3>
+    </div>
+    <!-- End Sidebar -->
+		
+    <!-- Begin Content -->
+    <div class="article-content" id="articles">
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <h6>
+            Setup local Apache server:
+          </h6>
+          <ol>
+            <li>Create Apache server:
+              <ol>
+                <li>Install Apache server using:
+                  <code class="code">
+                    sudo apt update</br>
+                    sudo apt install apache2
+                  </code>
+                </li>
+                <li>
+                  Rename the original <code>index.html</code> file in <code>/var/www/html</code> to <code>index.html.bak</code>
+                </li>
+                <li>
+                  Create a symlink of a directory in <code>/var/www/html</code> using:
+                  <code class="code">
+                    sudo ln -s /full/path/to/directory /var/www/html
+                  </code>
+                </li>
+                <li>
+                  To access the server with hostname(eg. example.com):
+                  <ol>
+                    <li>
+                      Backup original <code>/etc/apache2/sites-available/000-default.conf</code> to <code>000-default.conf.bak</code> using:
+                      <code class="code">
+                        sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.bak
+                      </code>
+                    </li>
+                    <li>
+                      Add <code>ServerName example.com</code> to top of file <code>/etc/apache2/sites-available/000-default.conf</code>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  Restart Apache Server:
+                  <code class="code">
+                    sudo systemctl restart apache2</br>
+                    sudo systemctl status apache2
+                  </code>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Set up <code>https</code> for Apache Server:
+              <ol>
+                <li>
+                  Install <code>openssl</code> as <code>sudo apt-get install openssl</code>
+                </li>
+                <li>
+                  Enable SSL module of Apache:
+                  <code class="code">
+                    sudo a2enmod ssl</br>
+                    sudo a2enmod rewrite
+                  </code>
+                </li>
+                <li>
+                  Backup original <code>/etc/apache2/apache2.conf</code> to <code>apache2.conf.bak</code> using:
+                  <code class="code">
+                    sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
+                    </code>
+                </li>
+                <li>
+                  Add
+                  <code class="code">
+                    &lt;Directory /var/www/html&gt;</br>
+                    &ensp;&ensp;AllowOverride All</br>
+                    &lt;/Directory&gt;
+                  </code>
+                  to <code>/etc/apache2/apache2.conf</code> after the block <code>&lt;Directory /var/www/&gt; ... &lt;/Directory&gt;</code>. The final <code>/etc/apache2/apache2.conf</code> will look like:
+                  <code class="code">
+                    ...</br>
+                    &lt;Directory /var/www/&gt;</br>
+                    &ensp;&ensp;...</br>
+                    &lt;/Directory&gt;</br>
+                    </br>
+                    &lt;Directory /var/www/html&gt;</br>
+                    &ensp;&ensp;AllowOverride All</br>
+                    &lt;/Directory&gt;</br>
+                    ...
+                  </code>
+                </li>
+                <li>
+                  Create a private key and the website certificate using the OpenSSL command as:
+                  <code class="code">
+                    sudo mkdir -p /etc/apache2/certificate</br>
+                    cd /etc/apache2/certificate</br>
+                    sudo openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out apache-certificate.crt -keyout apache.key
+                  </code>
+                  And enter requested informations as
+                  <code class="code">
+                    Country Name (2 letter code) [AU]:IN</br>
+                    State or Province Name (full name) [Some-State]:WB</br>
+                    Locality Name (eg, city) []:Kolkata</br>
+                    Organization Name (eg, company) [Internet Widgits Pty Ltd]:hsbasu</br>
+                    Organizational Unit Name (eg, section) []:hsbasu</br>
+                    Common Name (e.g. server FQDN or YOUR name) []:freedomrepo.myftp.org</br>
+                    Email Address []:</br>
+                  </code>
+                </li>
+                <li>
+                  Edit the Apache configuration file <code>/etc/apache2/sites-available/000-default.conf</code> for the default website and add the following lines:
+                  <code class="code">
+                    &lt;VirtualHost *:443&gt;</br>
+                    &ensp;&ensp;ServerAdmin webmaster@localhost</br>
+                    &ensp;&ensp;DocumentRoot /var/www/html</br>
+                    &ensp;&ensp;ErrorLog ${APACHE_LOG_DIR}/error.log</br>
+                    &ensp;&ensp;CustomLog ${APACHE_LOG_DIR}/access.log combined</br>
+                    &ensp;&ensp;SSLEngine on</br>
+                    &ensp;&ensp;SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt</br>
+                    &ensp;&ensp;SSLCertificateKeyFile /etc/apache2/certificate/apache.key</br>
+                    &lt;/VirtualHost&gt;
+                  </code>
+                  The final form of <code>/etc/apache2/sites-available/000-default.conf</code> should be:
+                  <code class="code">
+                    ServerName example.com</br>
+                    ...</br>
+                    &lt;VirtualHost *:80&gt;</br>
+                    &ensp;&ensp;...</br>
+                    &lt;/VirtualHost&gt;</br>
+                    </br>
+                    &lt;VirtualHost *:443&gt;</br>
+                    &ensp;&ensp;ServerAdmin webmaster@localhost</br>
+                    &ensp;&ensp;DocumentRoot /var/www/html</br>
+                    &ensp;&ensp;ErrorLog ${APACHE_LOG_DIR}/error.log</br>
+                    &ensp;&ensp;CustomLog ${APACHE_LOG_DIR}/access.log combined</br>
+                    &ensp;&ensp;SSLEngine on</br>
+                    &ensp;&ensp;SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt</br>
+                    &ensp;&ensp;SSLCertificateKeyFile /etc/apache2/certificate/apache.key</br>
+                    &lt;/VirtualHost&gt;</br>
+                    ...
+                  </code>
+                </li>
+                <li>
+                  Restart Apache Server:
+                  <code class="code">
+                    sudo systemctl restart apache2</br>
+                    sudo systemctl status apache2
+                  </code>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Set up password-protected apache server using <code>htpasswd</code>:
+              <ol>
+                <li>
+                  Install <code>htpasswd</code>, part of the <code>apache2-utils</code> package:
+                    <code class="code">
+                      sudo apt-get install apache2-utils
+                    </code>
+                </li>
+                <li>
+                  Create the Password File and save it:
+                  <code class="code">
+                    sudo vi /etc/apache2/.htpasswd
+                  </code>
+                </li>
+                <li>
+                  Create username and password:
+                  <code class="code">
+                    sudo htpasswd -c /etc/apache2/.htpasswd userid1
+                  </code>
+                  To add another user:
+                  <code class="code">
+                    sudo htpasswd /etc/apache2/.htpasswd userid2
+                  </code>
+                </li>
+                <li>
+                  Check password file: <code>cat /etc/apache2/.htpasswd</code>
+                </li>
+                <li>
+                  Configure Apache Password Authentication:
+                  <ol>
+                    <li>
+                      Use either <b>Option 1</b> or <b>Option 2</b>.
+                    </li>
+                    <li>
+                      <b>Option 1:</b> within the Virtual Host Definition
+                      <ol>
+                        <li>
+                          Edit <code>/etc/apache2/sites-available/000-default.conf</code> using: <code>sudo vi /etc/apache2/sites-available/000-default.conf</code>
+                        </li>
+                        <li>
+                          Add
+                          <code class="code">
+                            &lt;Directory "/var/www/html/secure/directory"&gt;</br>
+                            &ensp;&ensp;AuthType Basic</br>
+                            &ensp;&ensp;AuthName "Restricted Content"</br>
+                            &ensp;&ensp;AuthUserFile /etc/apache2/.htpasswd</br>
+                            &ensp;&ensp;Require valid-user</br>
+                            &lt;/Directory&gt;
+                          </code>
+                          between
+                          <code class="code">
+                            &lt;VirtualHost *:portnumber&gt;</br>
+                            &ensp;&ensp;...</br>
+                            &lt;/VirtualHost&gt;</code>
+                            for both ports <b>80</b> and <b>443</b>.
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      <b>Option 2:</b> within the directory using <code>.htaccess</code>
+                      <ol>
+                        <li>
+                          Create <code>.htaccess</code> file in <code>/path/to/secure/directory</code> as: <code>vi /path/to/secure/directory/.htaccess</code> and save.
+                        </li>
+                        <li>
+                          Add the following lines to <code>/path/to/secure/directory/.htaccess</code>
+                          <code class="code">
+                            AuthType Basic</br>
+                            AuthName "Restricted Content"</br>
+                            AuthUserFile /etc/apache2/.htpasswd</br>
+                            Require valid-user
+                          </code>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  Restart Apache Server:
+                  <code class="code">
+                    sudo systemctl restart apache2</br>
+                    sudo systemctl status apache2
+                  </code>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+    <!-- End Content -->
+    
+    <!-- Begin Footer -->
+    <footer class="w3-center bar">
+			<div class="w3-right">
+				<p class="services">
+          <a class="services" href="https://twitter.com/hsbasu">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/twitter.png" alt="Twitter">
+          </a>
+          <a class="services" href="skype:live:hsbasu">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/skype.png" alt="Skype">
+          </a>
+          <a class="services" href="https://www.linkedin.com/in/hsbasu" target="_blank">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/linkedin.png" alt="LinkedIN">
+          </a>
+          <a class="services" href="https://github.com/hsbasu">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/github.png" alt="Github">
+          </a>
+          <a class="services" href="https://www.facebook.com/bhimadri" target="_blank">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/facebook.png" alt="Facebook">
+          </a>
+          <a class="services" href="mailto:hsb10@iitbbs.ac.in">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/email.png" alt="Email">
+          </a>
+          <a class="services" href="https://hsbasu.github.io" target="_blank">
+            <img class="services" src="https://hsbasu.github.io/styles/icons/social/site.png" alt="Site">
+          </a>
+				</p>
+      </div>
+      <div class="w3-left">
+        <p class="crights">
+					&copy;2021 Himadri Sekhar Basu
+				</p>
+			</div>
+    </footer>
+    <!-- End Footer -->
+  </body>
+</html>
