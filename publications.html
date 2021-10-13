@@ -13,7 +13,7 @@
   <body>
     <!-- Scripts -->
     <script type="text/javascript" 
-      src="styles/scripts/navbar.js">
+      src="styles/jscripts/navbar.js">
     </script>
 
     <!-- Begin Header -->
@@ -37,13 +37,16 @@
           <a class="bar-item" href="index.html">Home</a>
           <a class="bar-item" href="research.html">Research</a>
           <a class="bar-item" href="publications.html">Publications</a>
-          <div class="dropdown bar-item">
-            <a class="dropbtn" href="hobby.html">Fun Projects
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-content">
-              <a href="linux/packages.html">Linux Packages</a>
-              <a href="linux/tutorials.html">Tutorials</a>
+          <div class="bar-item">
+            <a class="dropdown-item" href="hobby.html">Fun Projects</a>
+            <div class="dropdown">
+              <a class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="linux/packages.html">Linux Packages</a>
+                <a href="linux/tutorials.html">Tutorials</a>
+              </div>
             </div>
           </div>
           <a class="bar-item" href="aboutme.html">About Me</a>
@@ -77,9 +80,14 @@
 
     <!-- Begin Footer -->
     <footer class="w3-center bar">
+      <div class="w3-left">
+        <p class="crights">
+					&copy;2021 Himadri Sekhar Basu
+				</p>
+			</div>
 			<div class="w3-right">
 				<p class="services">
-          <a class="services" href="https://twitter.com/hsbasu">
+          <a class="services" href="https://twitter.com/hsbasu" target="_blank">
             <img class="services" src="styles/icons/social/twitter.png" alt="Twitter">
           </a>
           <a class="services" href="skype:live:hsbasu">
@@ -88,7 +96,7 @@
           <a class="services" href="https://www.linkedin.com/in/hsbasu" target="_blank">
             <img class="services" src="styles/icons/social/linkedin.png" alt="LinkedIN">
           </a>
-          <a class="services" href="https://github.com/hsbasu">
+          <a class="services" href="https://github.com/hsbasu" target="_blank">
             <img class="services" src="styles/icons/social/github.png" alt="Github">
           </a>
           <a class="services" href="https://www.facebook.com/bhimadri" target="_blank">
@@ -102,11 +110,10 @@
           </a>
 				</p>
       </div>
-      <div class="w3-left">
-        <p class="crights">
-					&copy;2021 Himadri Sekhar Basu
-				</p>
-			</div>
+      <div class="w3-center">
+        <p class="crights" id="result"></p>
+        <script src="styles/jscripts/visits.js"></script>
+      </div>
     </footer>
     <!-- End Footer -->
   </body>

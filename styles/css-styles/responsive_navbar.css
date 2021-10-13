@@ -1,7 +1,6 @@
 
 .topnav {
 overflow: hidden;
-/* background-color: #333; */
 }
 
 /* Header and Navigation bar */
@@ -13,13 +12,19 @@ overflow: hidden;
 .topnav a {
 	text-align: center;
 	text-decoration: none;
+  border-radius: 10px;
 }
 
 .topnav .icon {
 	display: none;
 }
 
+.dropdown-item {
+  display: inline-block;
+}
+
 .dropdown {
+  display: inline-block;
 	padding: 1px;
 }
 
