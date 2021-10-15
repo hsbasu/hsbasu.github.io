@@ -2,7 +2,8 @@
 My personal website
 
 ## ToDo List
-1. [ ] Add github stats API.
+1. [x] Add github stats API.
+1. [ ] Add Dark-mode.
 2. [x] Add new links in hobby for battery-monitor and others.
 3. [ ] Add github pages view counter.
 4. [ ] Add linux app screenshots

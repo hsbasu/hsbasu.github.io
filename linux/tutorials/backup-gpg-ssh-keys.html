@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Tutorials</title>
     <link href="https://hsbasu.github.io/styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/dark-styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -12,20 +13,21 @@
   
   <body>
     <!-- Scripts -->
-    <script type="text/javascript" 
-      src="https://hsbasu.github.io/styles/jscripts/navbar.js">
-    </script>
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/navbar.js"></script>
     
     <!-- Begin Header -->
-    <header>
+    <header class="w3-center bar">
+      <div class="w3-left">
+        <button type="button" id="theme" onclick="themeToggle()">Dark theme: Off</button>
+      </div>
       <div class="w3-center">
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
-            <picture>
-              <source srcset="https://hsbasu.github.io/styles/icons/freedom-logo.png" media="(max-width: 600px)">
-              <source srcset="https://hsbasu.github.io/styles/icons/freedom-small-logo.png">
-              <img src="https://hsbasu.github.io/styles/icons/freedom-small-logo.png" alt="freedom-logo">
-            </picture>
-          </a>
+          <picture>
+            <source srcset="https://hsbasu.github.io/styles/icons/freedom-logo.png" media="(max-width: 600px)">
+            <source srcset="https://hsbasu.github.io/styles/icons/freedom-small-logo.png">
+            <img src="https://hsbasu.github.io/styles/icons/freedom-small-logo.png" alt="freedom-logo">
+          </picture>
+        </a>
       </div>
     </header>
     <!-- End Header -->
@@ -57,32 +59,35 @@
     </nav>
     <!-- End Navigation -->
     
-    <!-- Begin Sidebar -->
-    <div class="sidebar" id="newsbar">
-      <h3>News</h3>
-    </div>
-    <!-- End Sidebar -->
-    
     <!-- Begin Content -->
-    <div class="article-content" id="articles">
-      <h2>Contents</h2>
-      <ol>
-        <li>
-          <b>
-            Create, backup and restore ssh keys.
-          </b>
-          <ol>
-            <li>
-              <h6>Create ssh key:</h6>
-            </li>
-            <li>
-              <h6>Backup ssh key:</h6>
-              Copy `id_rsa` and `id_rsa.pub` from ~/.ssh to a safe place.
-            </li>
-          </ol>
-        </li>
-      </ol>
-    </div>
+    <section>
+      <!-- Begin Sidebar -->
+      <div class="sidebar" id="newsbar">
+        <h3>News</h3>
+      </div>
+      <!-- End Sidebar -->
+      
+      <!-- Begin Content -->
+      <div class="article-content" id="articles">
+        <h2>Contents</h2>
+        <ol>
+          <li>
+            <b>
+              Create, backup and restore ssh keys.
+            </b>
+            <ol>
+              <li>
+                <h6>Create ssh key:</h6>
+              </li>
+              <li>
+                <h6>Backup ssh key:</h6>
+                Copy `id_rsa` and `id_rsa.pub` from ~/.ssh to a safe place.
+              </li>
+            </ol>
+          </li>
+        </ol>
+      </div>
+    </section>
     <!-- End Content -->
     
     <!-- Begin Footer -->
@@ -123,5 +128,6 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/main.js"></script>
   </body>
 </html>
