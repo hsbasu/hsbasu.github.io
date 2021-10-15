@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Packages</title>
-    <link href="https://hsbasu.github.io/styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/dark-styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -12,12 +13,13 @@
   
   <body>
     <!-- Scripts -->
-    <script type="text/javascript" 
-      src="https://hsbasu.github.io/styles/jscripts/navbar.js">
-    </script>
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/navbar.js"></script>
     
     <!-- Begin Header -->
-    <header>
+    <header class="w3-center bar">
+      <div class="w3-left">
+        <button type="button" id="theme" onclick="themeToggle()">Dark theme: Off</button>
+      </div>
       <div class="w3-center">
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
 	        <picture>
@@ -57,43 +59,45 @@
     </nav>
     <!-- End Navigation -->
     
-    <!-- Begin Sidebar -->
-    <div class="sidebar" id="newsbar">
-      <h3>News</h3>
-    </div>
-    <!-- End Sidebar -->
-		
     <!-- Begin Content -->
-    <div class="article-content" id="articles">
-      <h1>Linux Packages</h1>
-        <ol>
-          <h2><li>
-            <a href="https://hsbasu.github.io/battery-monitor">Battery Monitor</a>
-          </li></h2>
-          <p>A utility tool developed on Python3 to monitor laptop battery. It will notify the user about charging, discharging, not charging, critically low battery and any other predefined state of the battery on Linux (surely if the battery is present).</p>
-          
-          <h2><li>
-            <a href="https://hsbasu.github.io/leaptime">Leaptime Manager</a>
-          </li></h2>
-          <p>Aiming to be an all-in-one, friendly to new-users, python3 based GUI backup manager for Debian/Ubuntu based systems.</p>
-          
-          <h2><li>
-            <a href="https://hsbasu.github.io/simple-pwgen">Simple Password Generator</a>
-          </li></h2>
-          <p>Very simple Python3-based GUI application to generate secure and random password. It lets an user choose:</p>
+    <section>
+      <!-- Begin Sidebar -->
+      <div class="sidebar" id="newsbar">
+        <h3>News</h3>
+      </div>
+      <!-- End Sidebar -->
+  		
+      <div class="article-content" id="articles">
+        <h1>Linux Packages</h1>
           <ol>
-            <li>Length of password between 1 to 999.</li>
-            <li>Whether to include lowercase, uppercase, digit or punctuation individually or all of them in a password.</li>
-            <li>Minimum number of each cases to be included in a password.</li>
-            <li>Whether to exclude some characters for each cases individually while generating a password.</li>
+            <h2><li>
+              <a href="https://hsbasu.github.io/battery-monitor">Battery Monitor</a>
+            </li></h2>
+            <p>A utility tool developed on Python3 to monitor laptop battery. It will notify the user about charging, discharging, not charging, critically low battery and any other predefined state of the battery on Linux (surely if the battery is present).</p>
+            
+            <h2><li>
+              <a href="https://hsbasu.github.io/leaptime">Leaptime Manager</a>
+            </li></h2>
+            <p>Aiming to be an all-in-one, friendly to new-users, python3 based GUI backup manager for Debian/Ubuntu based systems.</p>
+            
+            <h2><li>
+              <a href="https://hsbasu.github.io/simple-pwgen">Simple Password Generator</a>
+            </li></h2>
+            <p>Very simple Python3-based GUI application to generate secure and random password. It lets an user choose:</p>
+            <ol>
+              <li>Length of password between 1 to 999.</li>
+              <li>Whether to include lowercase, uppercase, digit or punctuation individually or all of them in a password.</li>
+              <li>Minimum number of each cases to be included in a password.</li>
+              <li>Whether to exclude some characters for each cases individually while generating a password.</li>
+            </ol>
+            
+            <h2><li>
+              <a href="https://hsbasu.github.io/webapp-manager">Webapp Manager</a>
+            </li></h2>
+            <p>Run websites as if they were apps.</p>
           </ol>
-          
-          <h2><li>
-            <a href="https://hsbasu.github.io/webapp-manager">Webapp Manager</a>
-          </li></h2>
-          <p>Run websites as if they were apps.</p>
-        </ol>
-    </div>
+      </div>
+    </section>
     <!-- End Content -->
 
     <!-- Begin Footer -->
@@ -134,5 +138,6 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/main.js"></script>
   </body>
 </html>

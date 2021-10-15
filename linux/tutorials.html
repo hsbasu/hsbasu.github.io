@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Tutorials</title>
-    <link href="https://hsbasu.github.io/styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://hsbasu.github.io/styles/css-styles/dark-styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -12,12 +13,13 @@
   
   <body>
     <!-- Scripts -->
-    <script type="text/javascript" 
-      src="https://hsbasu.github.io/styles/jscripts/navbar.js">
-    </script>
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/navbar.js"></script>
     
     <!-- Begin Header -->
-    <header>
+    <header class="w3-center bar">
+      <div class="w3-left">
+        <button type="button" id="theme" onclick="themeToggle()">Dark theme: Off</button>
+      </div>
       <div class="w3-center">
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
 	        <picture>
@@ -37,13 +39,16 @@
           <a class="bar-item" href="https://hsbasu.github.io/index.html">Home</a>
           <a class="bar-item" href="https://hsbasu.github.io/research.html">Research</a>
           <a class="bar-item" href="https://hsbasu.github.io/publications.html">Publications</a>
-          <div class="dropdown bar-item">
-            <a class="dropbtn" href="https://hsbasu.github.io/hobby.html">Fun Projects
-              <i class="fa fa-caret-down"></i>
-            </a>
-            <div class="dropdown-content">
-              <a href="https://hsbasu.github.io/linux/packages.html">Linux Packages</a>
-              <a href="https://hsbasu.github.io/linux/tutorials.html">Tutorials</a>
+          <div class="bar-item">
+            <a class="dropdown-item" href="https://hsbasu.github.io/hobby.html">Fun Projects</a>
+            <div class="dropdown">
+              <a class="dropbtn">
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="https://hsbasu.github.io/linux/packages.html">Linux Packages</a>
+                <a href="https://hsbasu.github.io/linux/tutorials.html">Tutorials</a>
+              </div>
             </div>
           </div>
           <a class="bar-item" href="https://hsbasu.github.io/aboutme.html">About Me</a>
@@ -54,29 +59,31 @@
     </nav>
     <!-- End Navigation -->
     
-    <!-- Begin Sidebar -->
-    <div class="sidebar" id="newsbar">
-      <h3>News</h3>
-    </div>
-    <!-- End Sidebar -->
-		
     <!-- Begin Content -->
-    <div class="article-content" id="articles">
-      <h2>Contents</h2>
-      <ol>
-        <h4>
-          <!-- <li>
-            Backup and restore GnuPG and SSH keys: <a href="backup-gpg-ssh-keys">Click Here</a>
-          </li>
-          <li>
-            Create own Linux-based distro: <a href="custom-ubuntu">Click Here</a>
-          </li> -->
-          <li>
-            Setup local Apache server: <a href="tutorials/apache-server.html">Click Here</a>
-          </li>
-        </h4>
-      </ol>
-    </div>
+    <section>
+      <!-- Begin Sidebar -->
+      <div class="sidebar" id="newsbar">
+        <h3>News</h3>
+      </div>
+      <!-- End Sidebar -->
+  		
+      <div class="article-content" id="articles">
+        <h2>Contents</h2>
+        <ol>
+          <h4>
+            <!-- <li>
+              Backup and restore GnuPG and SSH keys: <a href="backup-gpg-ssh-keys">Click Here</a>
+            </li>
+            <li>
+              Create own Linux-based distro: <a href="custom-ubuntu">Click Here</a>
+            </li> -->
+            <li>
+              Setup local Apache server: <a href="tutorials/apache-server.html">Click Here</a>
+            </li>
+          </h4>
+        </ol>
+      </div>
+    </section>
     <!-- End Content -->
     
     <!-- Begin Footer -->
@@ -117,5 +124,6 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/main.js"></script>
   </body>
 </html>
