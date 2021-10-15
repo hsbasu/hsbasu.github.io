@@ -54,12 +54,12 @@ overflow: hidden;
 
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #00008B;
-  color: white;
+  color: #FFFAEB;
 }
 
 .dropdown-content a:hover {
-  background-color: red;
-  color: white;
+  background-color: #C00000;
+  color: #FFFAEB;
 }
 
 .dropdown:hover .dropdown-content {
