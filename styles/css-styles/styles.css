@@ -1,7 +1,6 @@
 html {font-family: 'Open Sans', sans-serif; font-size: 150%;}
 *{box-sizing: border-box;}
 body {background-color: #06C2AC; margin: 5px; text-align: justify; padding: 10px;}
-/* body {background-color: #2C001E; color: #AAFF32; margin: 5px; text-align: justify; padding: 10px;} */
 
 /* Style the header */
 header {padding: 0.5%;}
@@ -19,6 +18,7 @@ footer {background-color: #666666; color: #7FFF00; padding: 5px; margin: 5px; te
 .w3-left {float: left; text-align: left;}
 .w3-right {float: right; text-align: right;}
 .w3-center {margin: auto; width: 100%; text-align: center;}
+header .w3-center {margin: 0px; min-width: 50%;}
 footer .w3-center {margin: 0px; min-width: 50%;}
 
 .bar {overflow: auto;}
@@ -28,8 +28,6 @@ a:hover.bar {background-color: unset;}
 /* aside ul {list-style-type: none; padding: 5px;} */
 
 /* all links */
-/* a {color: #06C2AC; padding: 2px; text-align: center; text-decoration: none; display: inline-block;}
-a:hover {opacity: 1; color: #2C001E; background-color: #06C2AC; border-radius: 10px;} */
 a {padding: 2px; text-align: center; text-decoration: none; display: inline-block;}
 a:hover {opacity: 0.8; background-color: #06C2AC; border-radius: 8px; padding: 2px;}
 
