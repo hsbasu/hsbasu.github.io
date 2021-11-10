@@ -4,11 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linux Tutorials</title>
+    
+    <!-- Stylesheets -->
     <link href="https://hsbasu.github.io/styles/css-styles/styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/dark-styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-light.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://cdn.bootcss.com/github-markdown-css/2.8.0/github-markdown.min.css" rel="stylesheet" type="text/css"> -->
+    
+    <!-- Scripts -->
+  	<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" charset="utf-8"></script>
+    <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/javascript.min.js" charset="utf-8"></script> -->
   </head>
   
   <body>
@@ -22,12 +31,12 @@
       </div>
       <div class="w3-center">
         <a class="bar" href="https://hsbasu.github.io" target="_blank">
-	        <picture>
-	          <source srcset="https://hsbasu.github.io/styles/icons/freedom-logo.png" media="(max-width: 600px)">
-	          <source srcset="https://hsbasu.github.io/styles/icons/freedom-small-logo.png">
-	          <img src="https://hsbasu.github.io/styles/icons/freedom-small-logo.png" alt="freedom-logo">
-	        </picture>
-	      </a>
+          <picture>
+            <source srcset="https://hsbasu.github.io/styles/icons/freedom-logo.png" media="(max-width: 600px)">
+            <source srcset="https://hsbasu.github.io/styles/icons/freedom-small-logo.png">
+            <img src="https://hsbasu.github.io/styles/icons/freedom-small-logo.png" alt="freedom-logo">
+          </picture>
+        </a>
       </div>
     </header>
     <!-- End Header -->
@@ -35,7 +44,7 @@
     <!-- Begin Navigation -->
     <nav class="stickey">
       <div class="topnav bar" id="myTopnav">
-				<h1 class="w3-center">
+        <h1 class="w3-center">
           <a class="bar-item" href="https://hsbasu.github.io/index.html">Home</a>
           <a class="bar-item" href="https://hsbasu.github.io/research.html">Research</a>
           <a class="bar-item" href="https://hsbasu.github.io/publications.html">Publications</a>
@@ -54,7 +63,7 @@
           <a class="bar-item" href="https://hsbasu.github.io/aboutme.html">About Me</a>
           <!-- Responsive navbar -->
           <a href="javascript:void(0);" class="icon" onclick="topnavbar()">&#9776;</a>
-			  </h1>
+        </h1>
       </div>
     </nav>
     <!-- End Navigation -->
@@ -72,13 +81,19 @@
         <ol>
           <h4>
             <li>
-              Backup and restore GnuPG and SSH keys: <a href="tutorials/backup-gpg-ssh-keys.html">Click Here</a>
+              Backup and Restore GnuPG and Secure Shell(SSH) keys: <a href="tutorials/backup-gpg-ssh-keys.html">Click Here</a>
             </li>
             <li>
-              Create own Linux-based distro: <a href="tutorials/custom-ubuntu.html">Click Here</a>
+              Create a Debian Apt Repository: <a href="tutorials/deb-package.html">Click Here</a>
             </li>
             <li>
-              Setup local Apache server: <a href="tutorials/apache-server.html">Click Here</a>
+              Create Your Own Ubuntu-based Distro: <a href="tutorials/custom-ubuntu.html">Click Here</a>
+            </li>
+            <li>
+              Layman's Guide to Use Git(Hub or Lab): <a href="tutorials/github-basic.html">Click Here</a>
+            </li>
+            <li>
+              Setup Apache Server on Ubuntu or Debian Based Systems: <a href="tutorials/apache-server.html">Click Here</a>
             </li>
           </h4>
         </ol>
@@ -124,7 +139,7 @@
       </div>
     </footer>
     <!-- End Footer -->
+    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/md_html.min.js">"render any markdown before applying themes"</script>
     <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/main.js"></script>
-    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/darkmode.js"></script>
   </body>
 </html>
