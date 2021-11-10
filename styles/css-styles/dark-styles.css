@@ -1,10 +1,10 @@
 body.dark-mode {
 	background-color: #401521;
-	color: #AAFF32;
+	color: #aaff32;
 }
 
 #newsbar.dark-mode{
-	background-color: #26091A;
+	background-color: #26091a;
 }
 
 #articles.dark-mode {
@@ -12,11 +12,11 @@ body.dark-mode {
 }
 
 section a.dark-mode {
-	color: #06C2AC;
+	color: #06c2ac;
 }
 
 section a.dark-mode:hover {
 	opacity: 1;
-	color: #26091A;
-	background-color: #06C2AC;
+	color: #26091a;
+	background-color: #06c2ac;
 }
