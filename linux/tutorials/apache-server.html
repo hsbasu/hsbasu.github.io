@@ -3,12 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linux Tutorials</title>
-    <link href="https://hsbasu.github.io/styles/css-styles/style.css" rel="stylesheet" type="text/css">
+    <title>Linux Tutorials | Setup Apache Server on Ubuntu or Debian Based Systems</title>
+    
+    <!-- Stylesheets -->
+    <link href="/media/project-freedom/Side_projects/my-repos/personal/hsbasu.github.io/styles/css-styles/styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/dark-styles.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_navbar.css" rel="stylesheet" type="text/css">
     <link href="https://hsbasu.github.io/styles/css-styles/responsive_sections.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-light.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://cdn.bootcss.com/github-markdown-css/2.8.0/github-markdown.min.css" rel="stylesheet" type="text/css"> -->
+    
+    <!-- Scripts -->
+  	<script src="https://cdn.bootcss.com/marked/0.3.6/marked.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js" charset="utf-8"></script>
+    <!-- <script src="https://cdn.bootcss.com/highlight.js/9.12.0/languages/javascript.min.js" charset="utf-8"></script> -->
   </head>
   
   <body>
@@ -68,243 +77,156 @@
       <!-- End Sidebar -->
   		
       <!-- Begin Content -->
-      <div class="article-content" id="articles">
+      <div id="articles" class="article-content">
         <h2>Contents</h2>
-        <ol>
-          <li>
-            <h6>
-              Setup local Apache server:
-            </h6>
-            <ol>
-              <li>Create Apache server:
-                <ol>
-                  <li>Install Apache server using:
-                    <code class="code">
-                      sudo apt update</br>
-                      sudo apt install apache2
-                    </code>
-                  </li>
-                  <li>
-                    Rename the original <code>index.html</code> file in <code>/var/www/html</code> to <code>index.html.bak</code>
-                  </li>
-                  <li>
-                    Create a symlink of a directory in <code>/var/www/html</code> using:
-                    <code class="code">
-                      sudo ln -s /full/path/to/directory /var/www/html
-                    </code>
-                  </li>
-                  <li>
-                    To access the server with hostname(eg. example.com):
-                    <ol>
-                      <li>
-                        Backup original <code>/etc/apache2/sites-available/000-default.conf</code> to <code>000-default.conf.bak</code> using:
-                        <code class="code">
-                          sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.bak
-                        </code>
-                      </li>
-                      <li>
-                        Add <code>ServerName example.com</code> to top of file <code>/etc/apache2/sites-available/000-default.conf</code>
-                      </li>
-                    </ol>
-                  </li>
-                  <li>
-                    Restart Apache Server:
-                    <code class="code">
-                      sudo systemctl restart apache2</br>
-                      sudo systemctl status apache2
-                    </code>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                Set up <code>https</code> for Apache Server:
-                <ol>
-                  <li>
-                    Install <code>openssl</code> as <code>sudo apt-get install openssl</code>
-                  </li>
-                  <li>
-                    Enable SSL module of Apache:
-                    <code class="code">
-                      sudo a2enmod ssl</br>
-                      sudo a2enmod rewrite
-                    </code>
-                  </li>
-                  <li>
-                    Backup original <code>/etc/apache2/apache2.conf</code> to <code>apache2.conf.bak</code> using:
-                    <code class="code">
-                      sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
-                      </code>
-                  </li>
-                  <li>
-                    Add
-                    <code class="code">
-                      &lt;Directory /var/www/html&gt;</br>
-                      &ensp;&ensp;AllowOverride All</br>
-                      &lt;/Directory&gt;
-                    </code>
-                    to <code>/etc/apache2/apache2.conf</code> after the block <code>&lt;Directory /var/www/&gt; ... &lt;/Directory&gt;</code>. The final <code>/etc/apache2/apache2.conf</code> will look like:
-                    <code class="code">
-                      ...</br>
-                      &lt;Directory /var/www/&gt;</br>
-                      &ensp;&ensp;...</br>
-                      &lt;/Directory&gt;</br>
-                      </br>
-                      &lt;Directory /var/www/html&gt;</br>
-                      &ensp;&ensp;AllowOverride All</br>
-                      &lt;/Directory&gt;</br>
-                      ...
-                    </code>
-                  </li>
-                  <li>
-                    Create a private key and the website certificate using the OpenSSL command as:
-                    <code class="code">
-                      sudo mkdir -p /etc/apache2/certificate</br>
-                      cd /etc/apache2/certificate</br>
-                      sudo openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out apache-certificate.crt -keyout apache.key
-                    </code>
-                    And enter requested informations as
-                    <code class="code">
-                      Country Name (2 letter code) [AU]:IN</br>
-                      State or Province Name (full name) [Some-State]:WB</br>
-                      Locality Name (eg, city) []:Kolkata</br>
-                      Organization Name (eg, company) [Internet Widgits Pty Ltd]:hsbasu</br>
-                      Organizational Unit Name (eg, section) []:hsbasu</br>
-                      Common Name (e.g. server FQDN or YOUR name) []:freedomrepo.myftp.org</br>
-                      Email Address []:</br>
-                    </code>
-                  </li>
-                  <li>
-                    Edit the Apache configuration file <code>/etc/apache2/sites-available/000-default.conf</code> for the default website and add the following lines:
-                    <code class="code">
-                      &lt;VirtualHost *:443&gt;</br>
-                      &ensp;&ensp;ServerAdmin webmaster@localhost</br>
-                      &ensp;&ensp;DocumentRoot /var/www/html</br>
-                      &ensp;&ensp;ErrorLog ${APACHE_LOG_DIR}/error.log</br>
-                      &ensp;&ensp;CustomLog ${APACHE_LOG_DIR}/access.log combined</br>
-                      &ensp;&ensp;SSLEngine on</br>
-                      &ensp;&ensp;SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt</br>
-                      &ensp;&ensp;SSLCertificateKeyFile /etc/apache2/certificate/apache.key</br>
-                      &lt;/VirtualHost&gt;
-                    </code>
-                    The final form of <code>/etc/apache2/sites-available/000-default.conf</code> should be:
-                    <code class="code">
-                      ServerName example.com</br>
-                      ...</br>
-                      &lt;VirtualHost *:80&gt;</br>
-                      &ensp;&ensp;...</br>
-                      &lt;/VirtualHost&gt;</br>
-                      </br>
-                      &lt;VirtualHost *:443&gt;</br>
-                      &ensp;&ensp;ServerAdmin webmaster@localhost</br>
-                      &ensp;&ensp;DocumentRoot /var/www/html</br>
-                      &ensp;&ensp;ErrorLog ${APACHE_LOG_DIR}/error.log</br>
-                      &ensp;&ensp;CustomLog ${APACHE_LOG_DIR}/access.log combined</br>
-                      &ensp;&ensp;SSLEngine on</br>
-                      &ensp;&ensp;SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt</br>
-                      &ensp;&ensp;SSLCertificateKeyFile /etc/apache2/certificate/apache.key</br>
-                      &lt;/VirtualHost&gt;</br>
-                      ...
-                    </code>
-                  </li>
-                  <li>
-                    Restart Apache Server:
-                    <code class="code">
-                      sudo systemctl restart apache2</br>
-                      sudo systemctl status apache2
-                    </code>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                Set up password-protected apache server using <code>htpasswd</code>:
-                <ol>
-                  <li>
-                    Install <code>htpasswd</code>, part of the <code>apache2-utils</code> package:
-                      <code class="code">
-                        sudo apt-get install apache2-utils
-                      </code>
-                  </li>
-                  <li>
-                    Create the Password File and save it:
-                    <code class="code">
-                      sudo vi /etc/apache2/.htpasswd
-                    </code>
-                  </li>
-                  <li>
-                    Create username and password:
-                    <code class="code">
-                      sudo htpasswd -c /etc/apache2/.htpasswd userid1
-                    </code>
-                    To add another user:
-                    <code class="code">
-                      sudo htpasswd /etc/apache2/.htpasswd userid2
-                    </code>
-                  </li>
-                  <li>
-                    Check password file: <code>cat /etc/apache2/.htpasswd</code>
-                  </li>
-                  <li>
-                    Configure Apache Password Authentication:
-                    <ol>
-                      <li>
-                        Use either <b>Option 1</b> or <b>Option 2</b>.
-                      </li>
-                      <li>
-                        <b>Option 1:</b> within the Virtual Host Definition
-                        <ol>
-                          <li>
-                            Edit <code>/etc/apache2/sites-available/000-default.conf</code> using: <code>sudo vi /etc/apache2/sites-available/000-default.conf</code>
-                          </li>
-                          <li>
-                            Add
-                            <code class="code">
-                              &lt;Directory "/var/www/html/secure/directory"&gt;</br>
-                              &ensp;&ensp;AuthType Basic</br>
-                              &ensp;&ensp;AuthName "Restricted Content"</br>
-                              &ensp;&ensp;AuthUserFile /etc/apache2/.htpasswd</br>
-                              &ensp;&ensp;Require valid-user</br>
-                              &lt;/Directory&gt;
-                            </code>
-                            between
-                            <code class="code">
-                              &lt;VirtualHost *:portnumber&gt;</br>
-                              &ensp;&ensp;...</br>
-                              &lt;/VirtualHost&gt;</code>
-                              for both ports <b>80</b> and <b>443</b>.
-                          </li>
-                        </ol>
-                      </li>
-                      <li>
-                        <b>Option 2:</b> within the directory using <code>.htaccess</code>
-                        <ol>
-                          <li>
-                            Create <code>.htaccess</code> file in <code>/path/to/secure/directory</code> as: <code>vi /path/to/secure/directory/.htaccess</code> and save.
-                          </li>
-                          <li>
-                            Add the following lines to <code>/path/to/secure/directory/.htaccess</code>
-                            <code class="code">
-                              AuthType Basic</br>
-                              AuthName "Restricted Content"</br>
-                              AuthUserFile /etc/apache2/.htpasswd</br>
-                              Require valid-user
-                            </code>
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li>
-                    Restart Apache Server:
-                    <code class="code">
-                      sudo systemctl restart apache2</br>
-                      sudo systemctl status apache2
-                    </code>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-        </ol>
+        <template type="markdown">
+          1. Create Apache server:
+            1. Install Apache server using:
+              ```
+              sudo apt update
+              sudo apt install apache2
+              ```
+            2. Rename the original `index.html` file in `/var/www/html` to `index.html.bak`
+            3. Create a symlink of a directory in `/var/www/html` using:
+              ```
+              sudo ln -s /full/path/to/directory /var/www/html
+              ```
+            4. To access the server with hostname(eg. example.com):
+              1. Backup original `/etc/apache2/sites-available/000-default.conf` to `000-default.conf.bak` using:
+                ```
+                sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.bak
+                ```
+              2. Add `ServerName example.com` to top of file `/etc/apache2/sites-available/000-default.conf`
+            5. Restart Apache Server:
+              ```
+              sudo systemctl restart apache2
+              sudo systemctl status apache2
+              ```
+
+          2. Set up `https` for Apache Server
+            1. Install `openssl` as `sudo apt-get install openssl`
+            2. Enable SSL module of Apache: `sudo a2enmod ssl` and `sudo a2enmod rewrite`
+            3. Backup original `/etc/apache2/apache2.conf` to `apache2.conf.bak` using:
+              ```
+              sudo cp /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
+              ```
+            4. Add
+              ```
+              <Directory /var/www/html>
+                AllowOverride All
+              </Directory>
+              ```
+              to `/etc/apache2/apache2.conf` after the block ```<Directory /var/www/> ... </Directory>```. The final `/etc/apache2/apache2.conf` will look like:
+              ```
+              ...
+              <Directory /var/www/>
+                ...
+              </Directory>
+              
+              <Directory /var/www/html>
+                AllowOverride All
+              </Directory>
+              ...
+              ```
+            5. Create a private key and the website certificate using the OpenSSL command as:
+              ```
+              mkdir -p /etc/apache2/certificate
+              cd /etc/apache2/certificate
+              openssl req -new -newkey rsa:4096 -x509 -sha256 -days 365 -nodes -out apache-certificate.crt -keyout apache.key
+              ```
+              And enter requested informations as
+              ```
+              Country Name (2 letter code) [AU]:IN
+              State or Province Name (full name) [Some-State]:WB
+              Locality Name (eg, city) []:Kolkata
+              Organization Name (eg, company) [Internet Widgits Pty Ltd]:hsbasu
+              Organizational Unit Name (eg, section) []:hsbasu
+              Common Name (e.g. server FQDN or YOUR name) []:freedomrepo.myftp.org
+              Email Address []:
+              ```
+            6. Edit the Apache configuration file `/etc/apache2/sites-available/000-default.conf` for the default website and add the following lines:
+              ```
+              <VirtualHost *:443>
+                    ServerAdmin webmaster@localhost
+                    DocumentRoot /var/www/html
+                    ErrorLog ${APACHE_LOG_DIR}/error.log
+                    CustomLog ${APACHE_LOG_DIR}/access.log combined
+                    SSLEngine on
+                    SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt
+                    SSLCertificateKeyFile /etc/apache2/certificate/apache.key
+              </VirtualHost>
+              ```
+              The final form of `/etc/apache2/sites-available/000-default.conf` should be:
+              ```
+              ServerName example.com
+              <VirtualHost *:80>
+                ...
+              </VirtualHost>
+              
+              <VirtualHost *:443>
+                    ServerAdmin webmaster@localhost
+                    DocumentRoot /var/www/html
+                    ErrorLog ${APACHE_LOG_DIR}/error.log
+                    CustomLog ${APACHE_LOG_DIR}/access.log combined
+                    SSLEngine on
+                    SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt
+                    SSLCertificateKeyFile /etc/apache2/certificate/apache.key
+              </VirtualHost>
+              ```
+            7. Restart Apache Server:
+              ```
+              sudo systemctl restart apache2
+              sudo systemctl status apache2
+              ```
+
+          3. Set up password-protected apache server using `htpasswd`
+            1. install `htpasswd`, part of the `apache2-utils` package:
+            ```
+            sudo apt-get install apache2-utils
+            ```
+            2. Create the Password File and save it:
+            ```
+            sudo vi /etc/apache2/.htpasswd
+            ```
+            3. Create username and password:
+            ```
+            sudo htpasswd -c /etc/apache2/.htpasswd userid1
+            ```
+            To add another user:
+            ```
+            sudo htpasswd /etc/apache2/.htpasswd userid2
+            ```
+            4. Check password file:	```cat /etc/apache2/.htpasswd```
+            5. Configure Apache Password Authentication:
+              1. Use either **Option 1** or **Option 2**.
+              2. **Option 1:** within the Virtual Host Definition
+                1. Edit `/etc/apache2/sites-available/000-default.conf` using: ```sudo vi /etc/apache2/sites-available/000-default.conf```
+                2. Add
+                ```
+                <Directory "/var/www/html/secure/directory">
+                  AuthType Basic
+                  AuthName "Restricted Content"
+                  AuthUserFile /etc/apache2/.htpasswd
+                  Require valid-user
+                </Directory>
+                ```
+                between ``` <VirtualHost *:portnumber> contents </VirtualHost>``` for both ports **80** and **443**.
+              3. **Option 2:** within the directory using `.htaccess`
+                1. Create `.htaccess` file in `/path/to/secure/directory` as:
+                `vi /path/to/secure/directory/.htaccess` and save.
+                2. Add the following lines to `/path/to/secure/directory/.htaccess`
+                  ```
+                  AuthType Basic
+                  AuthName "Restricted Content"
+                  AuthUserFile /etc/apache2/.htpasswd
+                  Require valid-user
+                  ```
+            4. Restart Apache Server:
+            ```
+            sudo systemctl restart apache2
+            sudo systemctl status apache2
+            ```
+        </template>
       </div>
     </section>
     <!-- End Content -->
@@ -347,6 +269,7 @@
       </div>
     </footer>
     <!-- End Footer -->
-    <script type="text/javascript" src="https://hsbasu.github.io/styles/jscripts/main.js"></script>
+    <script type="text/javascript" src="/media/project-freedom/Side_projects/my-repos/personal/hsbasu.github.io/styles/jscripts/main.js"></script>
+    <script type="text/javascript" src="/media/project-freedom/Side_projects/my-repos/personal/hsbasu.github.io/styles/jscripts/md_html.min.js"></script>
   </body>
 </html>

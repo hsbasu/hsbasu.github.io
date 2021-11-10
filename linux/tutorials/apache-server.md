@@ -61,6 +61,7 @@
 		Organizational Unit Name (eg, section) []:hsbasu
 		Common Name (e.g. server FQDN or YOUR name) []:freedomrepo.myftp.org
 		Email Address []:
+		```
 	6. Edit the Apache configuration file `/etc/apache2/sites-available/000-default.conf` for the default website and add the following lines:
 		```
 		<VirtualHost *:443>
@@ -90,6 +91,7 @@
 	        SSLCertificateFile /etc/apache2/certificate/apache-certificate.crt
 	        SSLCertificateKeyFile /etc/apache2/certificate/apache.key
 		</VirtualHost>
+		```
 	7. Restart Apache Server:
 		```
 		sudo systemctl restart apache2

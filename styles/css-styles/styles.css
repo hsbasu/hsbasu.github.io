@@ -1,83 +1,59 @@
-html {font-family: 'Open Sans', sans-serif; font-size: 150%;}
-*{box-sizing: border-box;}
-body {background-color: #06C2AC; margin: 5px; text-align: justify; padding: 10px;}
+html { font-family: 'Open Sans', sans-serif; font-size: 150%; }
+*{ box-sizing: border-box; }
+body { background-color: #06c2ac; margin: 5px; text-align: justify; padding: 10px; }
 
 /* Style the header */
-header {padding: 0.5%;}
+header { padding: 0.5%; }
 
 /* Style the navigation bar */
-nav {background-color: #7FFF00; padding: 5px; width: 100%; border-radius: 10px;}
+nav { background-color: #7fff00; padding: 5px; width: 100%; border-radius: 10px; }
 
 /* Style the footer */
-<<<<<<< HEAD
-<<<<<<< HEAD
-footer {background-color: #666666; color: #7FFF00; padding: 5px; margin: 2px; margin-top: 50px; text-align: center; border-radius: 10px;}
-<<<<<<< HEAD
-=======
-=======
-footer {background-color: #666666; color: #7FFF00; padding: 5px; margin: 5px; text-align: center; border-radius: 10px;}
->>>>>>> 143947d... fix overflow at footer
-=======
-footer {background-color: #666666; color: #7FFF00; padding: 5px; margin: 5px; text-align: center; border-radius: 10px; display: inline-block;}
->>>>>>> 6751de6... Update theme of the website
+footer { background-color: #666666; color: #7fff00; padding: 5px; margin: 5px; text-align: center; border-radius: 10px; display: inline-block; }
+
+section { margin: 10px auto; }
+section:after { content: ""; display: table; clear: both; }
 
 /* Create two columns/boxes that floats next to each other */
-#newsbar {background-color: #2C001E; color: #7FFF00; width: 25%; margin: 2px; margin-top: 10px; padding: 10px; float: left; border-radius: 10px;}
-#articles {background-color: #f1f1f1; width: 73%; margin: 2px; margin-top: 10px; padding: 10px; float: left;}
->>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
+#newsbar { background-color: #2c001e; color: #7fff00; width: 25%; margin: 2px; padding: 10px; float: left; border-radius: 10px; }
+#articles { background-color: #f1f1f1; width: 74%; margin: 0 auto; padding: 10px; float: left; border-radius: 10px; }
 
-/* Create two columns/boxes that floats next to each other */
-#newsbar {background-color: #2C001E; color: #7FFF00; width: 25%; margin: 2px; margin-top: 10px; padding: 10px; float: left; border-radius: 10px;}
-#articles {background-color: #f1f1f1; width: 73%; margin: 2px; margin-top: 10px; padding: 10px; float: left;}
+.w3-left { float: left; text-align: left; }
+.w3-right { float: right; text-align: right; }
+.w3-center { margin: auto; width: 100%; text-align: center; }
+header .w3-center { margin: 0px; min-width: 50%; }
+footer .w3-center { margin: 0px; min-width: 50%; }
 
-<<<<<<< HEAD
-.w3-left {float: left; text-align: left;}
-.w3-right {float: right; text-align: right;}
-.w3-center {margin: auto; width: 100%; text-align: center;}
-header .w3-center {margin: 0px; min-width: 50%;}
-footer .w3-center {margin: 0px; min-width: 50%;}
+.bar { overflow: auto; }
+a:hover.bar { background-color: unset; }
 
-.bar {overflow: auto;}
-a:hover.bar {background-color: unset;}
-
-=======
-.bar {overflow: auto;}
-a:hover.bar {background-color: unset;}
-
->>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
 /* Style the list inside the menu */
-/* aside ul {list-style-type: none; padding: 5px;} */
+/* aside ul { list-style-type: none; padding: 5px; } */
 
 /* all links */
-a {padding: 2px; text-align: center; text-decoration: none; display: inline-block;}
-a:hover {opacity: 0.8; background-color: #06C2AC; border-radius: 8px; padding: 2px;}
+a { padding: 2px; text-align: center; text-decoration: none; display: inline-block; }
+a:hover { opacity: 0.8; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
 
 /* all text, image and lists */
-p, li {line-height: 150%;}
-li, ol, ul {margin-left: 1.5%;}
-img {display: block; margin: 5px;}
+p, li { line-height: 200%; }
+li, ol, ul { margin-left: 1.5%; }
+img { display: block; margin: 5px; }
 
 /* social services at footer */
-img.services {margin: 0px;}
-<<<<<<< HEAD
-a.services {opacity: 0.5; padding: 0px;}
-a:hover.services {opacity: 1; background-color: unset; padding: 5px;}
-p.services {line-height: 0px; padding: 2px; margin: 2px;}
-p.crights {margin: 2px;}
-=======
-a.services{opacity: 0.5; padding: 0px;}
-a:hover.services{opacity: 1; background-color: unset; padding: 5px;}
-p.services{line-height: 0px; padding: 0px; margin: 2px;}
-p.crights{margin: 2px;}
->>>>>>> 8a3bf07... Increase responsiveness (#4) (#5)
+img.services { margin: 0px; }
+a.services { opacity: 0.5; padding: 0px; }
+a:hover.services { opacity: 1; background-color: unset; padding: 5px; }
+p.services { line-height: 0px; padding: 2px; margin: 2px; }
+p.crights { margin: 2px; }
 
 /* Code snippets */
-code {background-color: #FDF6E3; color: black; padding: 5px; border-radius: 5px;}
-.code {display: block; max-width: 80%; max-height: 200px; overflow: scroll;}
+pre code { background-color: #fdf6e3; color: black; padding: 5px; border-radius: 5px; line-height: 200%; display: block; max-width: 80%; max-height: 200px; overflow: auto; }
+code { background-color: #fdf6e3; color: black; padding: 2px; border-radius: 5px; line-height: 200%; overflow: auto; }
+
 
 .line {
-	background: transparent url(styles/icons/line.png) repeat-x;
-	height: 2px;
-	padding: 20px 0 0 0;
-	line-break: 0px;
+  background: transparent url(styles/icons/line.png) repeat-x;
+  height: 2px;
+  padding: 20px 0 0 0;
+  line-break: 0px;
 }
