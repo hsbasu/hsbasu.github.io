@@ -24,12 +24,10 @@ section:after { content: ""; display: table; clear: both; }
 
 header .bar { text-align: center; overflow: visible; }
 header a { margin: 0; }
+header a:hover { margin: 0; background-color: unset; }
 header #datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
 
 footer .w3-center { margin: 0px; min-width: 50%; }
-
-/* .bar { overflow: auto; } */
-a:hover.bar { background-color: unset; }
 
 /* Style the list inside the menu */
 /* aside ul { list-style-type: none; padding: 5px; } */
