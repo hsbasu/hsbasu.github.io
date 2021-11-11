@@ -11,6 +11,10 @@ body.dark-mode {
 	background-color: #321008;
 }
 
+#datetime.dark-mode {
+	background-color: #26091a;
+}
+
 section a.dark-mode {
 	color: #06c2ac;
 }

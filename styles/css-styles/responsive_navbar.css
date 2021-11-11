@@ -1,9 +1,8 @@
-
 .topnav {
-overflow: hidden;
+  overflow: hidden;
 }
 
-/* Header and Navigation bar */
+/* Navigation bar */
 .stickey { position: sticky; top: 0; }
 
 /* Navbar items */
@@ -40,7 +39,7 @@ overflow: hidden;
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #66CC00;
+	background-color: #66cc00;
 	z-index: 1;
 }
 
@@ -53,13 +52,13 @@ overflow: hidden;
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #00008B;
-  color: #FFFAEB;
+  background-color: #00008b;
+  color: #fffaeb;
 }
 
 .dropdown-content a:hover {
-  background-color: #C00000;
-  color: #FFFAEB;
+  background-color: #c00000;
+  color: #fffaeb;
 }
 
 .dropdown:hover .dropdown-content {

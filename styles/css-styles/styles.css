@@ -22,8 +22,9 @@ section:after { content: ""; display: table; clear: both; }
 .w3-right { float: right; text-align: right; }
 .w3-center { margin: 0 auto; width: 100%; text-align: center; }
 
-header .bar { margin: 0 auto; text-align: center; float: none; overflow: visible; margin: 10px; }
-header h4#datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
+header .bar { text-align: center; overflow: visible; }
+header a { margin: 0; }
+header #datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
 
 footer .w3-center { margin: 0px; min-width: 50%; }
 
@@ -34,13 +35,13 @@ a:hover.bar { background-color: unset; }
 /* aside ul { list-style-type: none; padding: 5px; } */
 
 /* all links */
-a { padding: 2px; text-align: center; text-decoration: none; display: inline-block; }
+a { margin: 0 auto; padding: 2px; text-align: center; text-decoration: none; display: inline-block; }
 a:hover { opacity: 0.8; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
 
 /* all text, image and lists */
 p, li { line-height: 150%; }
 li, ol, ul { margin-left: 1.5%; }
-img { display: block; margin: 5px; max-width: 90%; }
+img { display: block; margin: 5px; max-width: 90%; padding: 2px; }
 
 /* social services at footer */
 img.services { margin: 0px; }

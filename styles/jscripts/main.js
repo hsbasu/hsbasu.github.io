@@ -29,6 +29,9 @@
 	  element4.classList.add(onpageLoad);
 	}
   
+	let element5 = document.getElementById("datetime");
+	element5.classList.add(onpageLoad);
+  
 	document.getElementById("theme").textContent = "Dark Theme: "+localStorage.getItem("theme") || "Off";
 })();
 
@@ -38,19 +41,22 @@ function darkmodeon() {
   let element1 = document.body;
   element1.classList.toggle("dark-mode");
   
-  let element3 = document.getElementById("articles");
-  element3.classList.toggle("dark-mode");
+  let element2 = document.getElementById("articles");
+  element2.classList.toggle("dark-mode");
   
-  let element4 = document.getElementsByTagName("A");
+  let element3 = document.getElementsByTagName("A");
   var i;
-  for (i = 0; i < element4.length; i++) {
-    element4[i].classList.toggle("dark-mode");
+  for (i = 0; i < element3.length; i++) {
+    element3[i].classList.toggle("dark-mode");
   }
   
-  let element2 = document.getElementById("newsbar");
-  if (typeof(element2) != 'undefined' && element2 != null) {
-    element2.classList.toggle("dark-mode");
+  let element4 = document.getElementById("newsbar");
+  if (typeof(element4) != 'undefined' && element4 != null) {
+    element4.classList.toggle("dark-mode");
   }
+  
+	let element5 = document.getElementById("datetime");
+	element5.classList.toggle("dark-mode");
 }
 
 function themeToggle() {
@@ -78,4 +84,14 @@ document.getElementById("theme").textContent = "Dark Theme: "+localStorage.getIt
     document.getElementById("articles").style.width = "90%";
     document.getElementById("articles").style.float = "none";
   }
+})();
+
+
+// // Function to show current date and time
+(function datetime() {
+  var clockElement = document.getElementById('datetime');
+  function clock() {
+    clockElement.textContent = new Date().toString();
+  }
+  setInterval(clock, 1000);
 })();
