@@ -1,4 +1,4 @@
-html { font-family: 'Open Sans', sans-serif; font-size: 150%; }
+html { font-family: 'Open Sans', sans-serif; font-size: 100%; }
 *{ box-sizing: border-box; }
 body { background-color: #06c2ac; margin: 5px; text-align: justify; padding: 10px; }
 
@@ -20,11 +20,14 @@ section:after { content: ""; display: table; clear: both; }
 
 .w3-left { float: left; text-align: left; }
 .w3-right { float: right; text-align: right; }
-.w3-center { margin: auto; width: 100%; text-align: center; }
-header .w3-center { margin: 0px; min-width: 50%; }
+.w3-center { margin: 0 auto; width: 100%; text-align: center; }
+
+header .bar { margin: 0 auto; text-align: center; float: none; overflow: visible; margin: 10px; }
+header h4#datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
+
 footer .w3-center { margin: 0px; min-width: 50%; }
 
-.bar { overflow: auto; }
+/* .bar { overflow: auto; } */
 a:hover.bar { background-color: unset; }
 
 /* Style the list inside the menu */
@@ -35,16 +38,16 @@ a { padding: 2px; text-align: center; text-decoration: none; display: inline-blo
 a:hover { opacity: 0.8; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
 
 /* all text, image and lists */
-p, li { line-height: 200%; }
+p, li { line-height: 150%; }
 li, ol, ul { margin-left: 1.5%; }
-img { display: block; margin: 5px; }
+img { display: block; margin: 5px; max-width: 90%; }
 
 /* social services at footer */
 img.services { margin: 0px; }
 a.services { opacity: 0.5; padding: 0px; }
 a:hover.services { opacity: 1; background-color: unset; padding: 5px; }
-p.services { line-height: 0px; padding: 2px; margin: 2px; }
-p.crights { margin: 2px; }
+p.services { line-height: 0px; padding: 2px; margin: 2px; text-align: center; }
+p.crights { margin: 2px; text-align: center; }
 
 /* Code snippets */
 pre code { background-color: #fdf6e3; color: black; padding: 5px; border-radius: 5px; line-height: 200%; display: block; max-width: 80%; max-height: 200px; overflow: auto; }
