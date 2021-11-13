@@ -34,6 +34,7 @@
 	outline: none;
 	padding: 2px;
 	margin: 0;
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -66,27 +67,27 @@
 }
 
 @media screen and (max-width: 600px) {
-	.topnav a, .dropdown .dropbtn {
+	.topnav a, .dropdown .dropbtn, .bar-item {
 	display: none;
 	}
 .topnav a.icon {
-	float: right;
 	display: block;
 	}
 }
 
 @media screen and (max-width: 600px) {
   .topnav.responsive { position: relative; }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
+  .topnav.responsive a.icon {
     top: 0;
   }
-  .topnav.responsive a {
+  .topnav.responsive a, .topnav.responsive .bar-item {
     display: block;
   }
   .topnav.responsive .dropdown { float: none; }
   .topnav.responsive .dropdown-content { position: relative; }
+  .topnav.responsive .dropdown {
+    display: block;
+    width: 100%; }
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
