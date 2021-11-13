@@ -30,3 +30,25 @@ section a.dark-mode:hover {
 	opacity: 0.5;
 	padding: 10px 0;
 }
+
+a.badges.dark-mode:hover {
+	opacity: 0.8;
+	background-color: unset;
+}
+
+a.buttn.dark-mode{
+    color: #aaff32;
+    border: 1px solid #EBE910;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px 20px;
+    background-image: linear-gradient(#B37417, #B33117);
+    box-shadow:  inset 0px 1px 1px rgba(0,0,0,0.2), 1px 5px 5px rgba(255,255,255,0.8);
+}
+
+a.buttn.dark-mode:hover {
+    color: #26091a;
+    border: 1px solid #B3B10C;
+    background-image: linear-gradient(#FFA521, #FF4621);
+    box-shadow: inset 0px 1px 1px rgba(255,255,255,0.2), 0px 1px 0px transparent;
+}

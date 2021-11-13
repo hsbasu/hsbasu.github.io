@@ -33,8 +33,12 @@ section:after { content: ""; display: table; clear: both; }
 .w3-center { margin: 0 auto; width: 100%; text-align: center; }
 
 /* all links */
-a { margin: 0 auto; padding: 2px; text-align: center; text-decoration: none; display: inline-block; }
-a:hover { opacity: 0.8; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
+a { margin: 0 auto; padding: 2px; text-decoration: none; }
+a:hover { opacity: 0.8; color: #000; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
+a.badges:hover { opacity: 0.9; background-color: unset; }
+
+/* Badges */
+.badges { text-align: center; }
 
 /* all text, image and lists */
 p, li { line-height: 150%; }
@@ -59,4 +63,24 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   background: url("https://hsbasu.github.io/styles/icons/navigation/line.png") repeat-x;
   opacity: 0.2;
   padding: 10px 0;
+}
+
+/* Download buttons */
+.buttn {
+  color: #26091a;
+  border: 1px solid #5d910b;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px 20px;
+  display: inline-block;
+  background: linear-gradient(#93bd20, #659e10);
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,0.3), 0px 3px 7px rgba(0,0,0,0.7);
+}
+.buttn:hover {
+  color: #f1f1f1;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid  #527f0e;
+  background: linear-gradient(#749619, #527f0e);
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px 0px transparent;
 }
