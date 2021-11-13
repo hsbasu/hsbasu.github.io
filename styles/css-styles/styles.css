@@ -2,15 +2,24 @@ html { font-family: 'Open Sans', sans-serif; font-size: 100%; }
 *{ box-sizing: border-box; }
 body { background-color: #06c2ac; margin: 5px; text-align: justify; padding: 10px; }
 
+.center { margin: 5px; text-align: center; }
+
 /* Style the header */
 header { padding: 0.5%; }
+.center a:hover { margin: 0px; background-color: unset; padding: 0px; }
+header #datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
 
 /* Style the navigation bar */
 nav { background-color: #7fff00; padding: 5px; width: 100%; border-radius: 10px; }
 
-/* Style the footer */
-footer { background-color: #666666; color: #7fff00; padding: 5px; margin: 5px; text-align: center; border-radius: 10px; display: inline-block; }
+.bar { overflow: visible; }
 
+/* Style the footer */
+footer { background-color: #666666; color: #7fff00; padding: 5px; margin: 5px; text-align: center; border-radius: 10px; }
+
+footer .w3-center { margin: 0px; min-width: 50%; }
+
+/* Style the contents */
 section { margin: 10px auto; }
 section:after { content: ""; display: table; clear: both; }
 
@@ -18,19 +27,10 @@ section:after { content: ""; display: table; clear: both; }
 #newsbar { background-color: #2c001e; color: #7fff00; width: 25%; margin: 2px; padding: 10px; float: left; border-radius: 10px; }
 #articles { background-color: #f1f1f1; width: 74%; margin: 0 auto; padding: 10px; float: left; border-radius: 10px; }
 
+/* Style floats */
 .w3-left { float: left; text-align: left; }
 .w3-right { float: right; text-align: right; }
 .w3-center { margin: 0 auto; width: 100%; text-align: center; }
-
-header .bar { text-align: center; overflow: visible; }
-header a { margin: 0; }
-header a:hover { margin: 0; background-color: unset; }
-header #datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
-
-footer .w3-center { margin: 0px; min-width: 50%; }
-
-/* Style the list inside the menu */
-/* aside ul { list-style-type: none; padding: 5px; } */
 
 /* all links */
 a { margin: 0 auto; padding: 2px; text-align: center; text-decoration: none; display: inline-block; }
@@ -39,13 +39,15 @@ a:hover { opacity: 0.8; background-color: #06c2ac; border-radius: 8px; padding: 
 /* all text, image and lists */
 p, li { line-height: 150%; }
 li, ol, ul { margin-left: 1.5%; }
-img { display: block; margin: 5px; max-width: 90%; padding: 2px; }
+/* scale=1 sends sticky navbar t0 back */
+img { margin: 5px; max-width: 90%; min-height: 24px; display: inline-block; }
+video { max-width: 60%; display: inline-block; }
 
 /* social services at footer */
 img.services { margin: 0px; }
-a.services { opacity: 0.5; padding: 0px; }
+a.services { opacity: 0.5; padding: 0; display: inline-block; }
 a:hover.services { opacity: 1; background-color: unset; padding: 5px; }
-p.services { line-height: 0px; padding: 2px; margin: 2px; text-align: center; }
+p.services { line-height: 0px; margin: 2px; text-align: center; }
 p.crights { margin: 2px; text-align: center; }
 
 /* Code snippets */

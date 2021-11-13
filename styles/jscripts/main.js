@@ -11,27 +11,27 @@
 	  onpageLoad = null
 		localStorage.setItem("theme", "Off");
 	}
-	
-	let element1 = document.body;
-	element1.classList.add(onpageLoad);
-	
-	let element2 = document.getElementById("articles");
-	element2.classList.add(onpageLoad);
-	
-	let element3 = document.getElementsByTagName("A");
-	var i;
-	for (i = 0; i < element3.length; i++) {
-	  element3[i].classList.add(onpageLoad);
-	}
-	
-	let element4 = document.getElementById("newsbar");
-	if (typeof(element4) != 'undefined' && element4 != null) {
-	  element4.classList.add(onpageLoad);
-	}
-  
-	let element5 = document.getElementById("datetime");
-	element5.classList.add(onpageLoad);
-  
+	if (onpageLoad != null) {
+    let element1 = document.body;
+    element1.classList.add(onpageLoad);
+    
+    let element2 = document.getElementById("articles");
+    element2.classList.add(onpageLoad);
+    
+    let element3 = document.getElementsByTagName("A");
+    var i;
+    for (i = 0; i < element3.length; i++) {
+      element3[i].classList.add(onpageLoad);
+    }
+    
+    let element4 = document.getElementById("newsbar");
+    if (typeof(element4) != 'undefined' && element4 != null) {
+      element4.classList.add(onpageLoad);
+    }
+    
+    let element5 = document.getElementById("datetime");
+    element5.classList.add(onpageLoad);
+  }
 	document.getElementById("theme").textContent = "Dark Theme: "+localStorage.getItem("theme") || "Off";
 })();
 
