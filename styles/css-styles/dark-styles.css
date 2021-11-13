@@ -28,7 +28,6 @@ section a.dark-mode:hover {
 .line.dark-mode{
 	background: url("https://hsbasu.github.io/styles/icons/navigation/line-dark.png") repeat-x;
 	opacity: 0.5;
-	padding: 10px 0;
 }
 
 a.badges.dark-mode:hover {

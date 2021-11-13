@@ -31,6 +31,12 @@
     
     let element5 = document.getElementById("datetime");
     element5.classList.add(onpageLoad);
+  
+    let element6 = document.getElementsByClassName("line")
+    var i;
+    for (i = 0; i < element6.length; i++) {
+      element6[i].classList.add(onpageLoad);
+    }
   }
 	document.getElementById("theme").textContent = "Dark Theme: "+localStorage.getItem("theme") || "Off";
 })();
@@ -57,6 +63,12 @@ function darkmodeon() {
   
 	let element5 = document.getElementById("datetime");
 	element5.classList.toggle("dark-mode");
+  
+  let element6 = document.getElementsByClassName("line")
+  var i;
+  for (i = 0; i < element6.length; i++) {
+    element6[i].classList.toggle("dark-mode");
+  }
 }
 
 function themeToggle() {
