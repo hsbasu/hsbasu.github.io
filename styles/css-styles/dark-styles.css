@@ -1,18 +1,18 @@
 body.dark-mode {
-	background-color: #401521;
+	background-color: #33111A;
 	color: #aaff32;
 }
 
 #newsbar.dark-mode{
-	background-color: #26091a;
+	background-color: #25003E;
 }
 
 #articles.dark-mode {
-	background-color: #321008;
+	background-color: #26091a;
 }
 
 #datetime.dark-mode {
-	background-color: #26091a;
+	background-color: #25003E;
 }
 
 section a.dark-mode {
@@ -23,4 +23,10 @@ section a.dark-mode:hover {
 	opacity: 1;
 	color: #26091a;
 	background-color: #06c2ac;
+}
+
+.line.dark-mode{
+	background: url("https://hsbasu.github.io/styles/icons/navigation/line-dark.png") repeat-x;
+	opacity: 0.5;
+	padding: 10px 0;
 }
