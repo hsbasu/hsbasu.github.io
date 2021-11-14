@@ -17,4 +17,8 @@ My personal website
 
 ## References and Resources helped built this website
 
-https://www.iconsdb.com/custom-color/email-3-icon.html
+[Icons](https://www.iconsdb.com/custom-color/email-3-icon.html)
+
+[Emoji's](https://gist.github.com/rxaviers/7360908)
+
+[Font Awesome List](https://astronautweb.co/snippet/font-awesome/)
