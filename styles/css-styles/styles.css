@@ -6,7 +6,7 @@ body { background-color: #06c2ac; margin: 5px; text-align: justify; padding: 10p
 
 /* Style the header */
 header { padding: 0.5%; }
-.center a:hover { margin: 0px; background-color: unset; padding: 0px; }
+.center a:hover { margin: 0px; background-color: unset; }
 header #datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
 
 /* Style the navigation bar */
@@ -35,16 +35,16 @@ section:after { content: ""; display: table; clear: both; }
 /* all links */
 a { margin: 0 auto; padding: 2px; text-decoration: none; }
 a:hover { opacity: 0.8; color: #000; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
-a.badges:hover { opacity: 0.9; background-color: unset; }
+a.badges:hover { opacity: 1.0; background-color: unset; filter: brightness(80%); }
 
 /* Badges */
-.badges { text-align: center; }
+.badges { text-align: center;}
 
 /* all text, image and lists */
 p, li { line-height: 150%; }
 li, ol, ul { margin-left: 1.5%; }
 /* scale=1 sends sticky navbar t0 back */
-img { margin: 5px; max-width: 90%; min-height: 24px; display: inline-block; }
+img { margin: 5px; max-width: 90%; min-height: 32px; display: inline-block; }
 video { max-width: 60%; display: inline-block; }
 
 /* social services at footer */
