@@ -97,13 +97,3 @@ document.getElementById("theme").textContent = "Dark Theme: "+localStorage.getIt
     document.getElementById("articles").style.float = "none";
   }
 })();
-
-
-// // Function to show current date and time
-(function datetime() {
-  var clockElement = document.getElementById('datetime');
-  function clock() {
-    clockElement.textContent = new Date().toString();
-  }
-  setInterval(clock, 1000);
-})();
