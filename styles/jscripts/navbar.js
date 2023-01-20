@@ -1,3 +1,7 @@
+$(function() {
+  $("#myTopnav").load("https://hsbasu.github.io/navbar.html");
+});
+
 function topnavbar() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
