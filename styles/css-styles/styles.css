@@ -66,6 +66,12 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   padding: 10px 0;
 }
 
+.vline {
+  background: url("/home/himadri/Projects/project-mamolinux/Side_projects/my-repos/personal/hsbasu.github.io/styles/icons/navigation/vline.png") repeat-y;
+  opacity: 0.5;
+  padding: 10px 0;
+}
+
 /* Download buttons */
 .buttn {
   color: #26091a;
@@ -84,4 +90,24 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   border: 1px solid  #527f0e;
   background: linear-gradient(#749619, #527f0e);
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px 0px transparent;
+}
+
+/*List style*/
+.list-group .list-group-item {
+  background: transparent;
+}
+
+.list-group .list-group-item i {
+  margin-right: 5px;
+}
+
+.infobox {
+  border: 2px solid  #527f0e;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
