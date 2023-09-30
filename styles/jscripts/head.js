@@ -26,6 +26,3 @@ loadFile("https://code.jquery.com/jquery-1.11.3.min.js", "js");
 loadFile("https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.1/marked.min.js", "js");
 loadFile("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js", "js");
 // loadFile("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js", "js");
-loadFile("https://hsbasu.github.io/styles/jscripts/header.js", "js");
-loadFile("https://hsbasu.github.io/styles/jscripts/footer.js", "js");
-loadFile("https://hsbasu.github.io/styles/jscripts/navbar.js", "js");
