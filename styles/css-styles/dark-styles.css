@@ -56,3 +56,16 @@ a.buttn.dark-mode:hover {
     background-image: linear-gradient(#FFA521, #FF4621);
     box-shadow: inset 0px 1px 1px rgba(255,255,255,0.2), 0px 1px 0px transparent;
 }
+.darkbtn.dark-mode{
+	background-color: #fdf6e3;
+	color: #007bff;
+	color: inherit;
+	cursor: pointer;
+	font-size: 20px;
+	border: none;
+	padding: 2px;
+	border-radius: 5px;
+}
+.darkbtn.dark-mode:hover{
+	background-color: #e6dfce;
+}

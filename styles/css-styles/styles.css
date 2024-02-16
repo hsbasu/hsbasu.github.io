@@ -91,6 +91,18 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   background: linear-gradient(#749619, #527f0e);
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px 0px transparent;
 }
+.darkbtn{
+	background-color: #25003e;
+  color: #7fff00cc;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+.darkbtn:hover{
+	background-color: #3d0066;
+}
 
 /*List style*/
 .list-group .list-group-item {

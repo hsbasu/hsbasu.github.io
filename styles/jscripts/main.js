@@ -28,20 +28,26 @@ function darkmodeon() {
   for (i = 0; i < element6.length; i++) {
     element6[i].classList.toggle("dark-mode");
   }
+  
+  let element7 = document.getElementById("theme")
+  element7.classList.toggle("dark-mode");
 }
 
 function themeToggle() {
-// Toggles the theme and saves the theme state to localstorage
-let theme = localStorage.getItem("theme");
-if (theme && theme === "On") {
-  localStorage.setItem("theme", "Off");
-  darkmodeon();
-}
-else {
-  localStorage.setItem("theme", "On");
-  darkmodeon();
-}
-document.getElementById("theme").textContent = "Dark Theme: "+localStorage.getItem("theme");
+  // Toggles the theme and saves the theme state to localstorage
+  let theme = localStorage.getItem("theme");
+  var darkicon = ""
+  if (theme && theme === "On") {
+    darkicon = '<i class="fa-solid fa-sun" aria-hidden="true"></i>'
+    localStorage.setItem("theme", "Off");
+    darkmodeon();
+  }
+  else {
+    darkicon = '<i class="fa-solid fa-moon" aria-hidden="true"></i>'
+    localStorage.setItem("theme", "On");
+    darkmodeon();
+  }
+  document.getElementById("theme").innerHTML = darkicon;
 }
 // Functions for dark mode ends
 
