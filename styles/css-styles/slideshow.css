@@ -1,0 +1,43 @@
+
+/* Additional styles for the slideshow */
+.slideshow-container {
+    padding: 2rem 0;
+    max-width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.Slides {
+    display: none;
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px 20px; /* Added padding to create separation */
+    color: #26091a;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    left: 10px; /* Adjust the left position for the previous button */
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 10px; /* Adjust the right position for the next button */
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: #007bffcc; /* Adjusted color to match a bluish theme */
+    padding: 16px 20px; /* Added padding to create separation */
+}
