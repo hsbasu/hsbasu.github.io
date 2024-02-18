@@ -22,12 +22,14 @@ loadFile("https://hsbasu.github.io/styles/jscripts/header.js", "js");
 loadFile("https://hsbasu.github.io/styles/jscripts/footer.js", "js");
 loadFile("https://hsbasu.github.io/styles/jscripts/navbar.js", "js");
 loadFile("https://hsbasu.github.io/styles/jscripts/md_html.min.js", "js");
+loadFile("https://hsbasu.github.io/styles/jscripts/slideshow.js", "js");
 
 // Stylesheets
 loadFile("https://hsbasu.github.io/styles/css-styles/styles.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/dark-styles.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/responsive_navbar.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/responsive_sections.css", "css");
+loadFile("https://hsbasu.github.io/styles/css-styles/slideshow.css", "css");
 loadFile("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css", "css");
 loadFile("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/atom-one-light.min.css", "css");
 // loadFile("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css", "css");

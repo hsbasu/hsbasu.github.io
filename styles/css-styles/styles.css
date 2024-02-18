@@ -80,7 +80,7 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   padding: 5px;
   margin: 5px 20px;
   display: inline-block;
-  background: linear-gradient(#93bd20, #659e10);
+  background: linear-gradient(#bef52a, #8bd916);
   box-shadow: inset 0px 1px 0px rgba(255,255,255,0.3), 0px 3px 7px rgba(0,0,0,0.7);
 }
 .buttn:hover {
@@ -88,12 +88,12 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   border-radius: 10px;
   padding: 5px;
   border: 1px solid  #527f0e;
-  background: linear-gradient(#749619, #527f0e);
+  background: linear-gradient(#8eb81f, #69a312);
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px 0px transparent;
 }
 .darkbtn{
-	background-color: #25003e;
-  color: #7fff00cc;
+  background-color: #7fff00cc;
+  color: #25003e;
   cursor: pointer;
   font-size: 20px;
   border: none;
@@ -101,7 +101,7 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   border-radius: 5px;
 }
 .darkbtn:hover{
-	background-color: #3d0066;
+  opacity: 0.7;
 }
 
 /*List style*/
