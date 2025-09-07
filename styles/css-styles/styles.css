@@ -117,36 +117,13 @@ a.badges:hover {
 /* Standardize heading styles for consistency */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  font-size: 110%;
   margin: 1em 0;
-  line-height: 1.5;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-h4 {
-  font-size: 1.25em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
-  font-size: 0.875em;
+  line-height: 150%;
 }
 p, li {
   line-height: 150%;
-  font-size: 0.875em;
+  font-size: 110%;
 }
 li, ol, ul { margin-left: 1.5%; }
 img {
@@ -241,7 +218,6 @@ p.services { line-height: 0px; margin: 10px 0; text-align: center; }
 /* Code highlighting from highlight.js will apply automatically */
 .markdown-body pre code {
   display: block;
-  color: #222;
   font-size: 0.95em;
   line-height: 1.5;
 }

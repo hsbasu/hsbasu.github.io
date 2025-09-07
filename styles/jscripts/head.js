@@ -33,7 +33,6 @@ loadFile("https://hsbasu.github.io/styles/jscripts/header.js", "js");
 loadFile("https://hsbasu.github.io/styles/jscripts/footer.js", "js");
 loadFile("https://hsbasu.github.io/styles/jscripts/navbar.js", "js");
 loadFile("https://hsbasu.github.io/styles/jscripts/md_html.min.js", "js"); // Markdown wrapper
-loadFile("https://hsbasu.github.io/styles/jscripts/markdown-loader.js", "js"); // Markdown file loader
 loadFile("https://hsbasu.github.io/styles/jscripts/slideshow.js", "js");
 
 // Load site and third-party stylesheets

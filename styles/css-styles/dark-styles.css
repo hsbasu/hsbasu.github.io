@@ -37,6 +37,11 @@ section a.dark-mode:hover {
 	opacity: 0.5;
 }
 
+a.dark-mode:hover {
+	opacity: 0.8;
+	background-color: unset;
+}
+
 a.badges.dark-mode:hover {
 	opacity: 0.8;
 	background-color: unset;
@@ -70,4 +75,16 @@ a.buttn.dark-mode:hover {
 }
 .darkbtn.dark-mode:hover{
 	opacity: 0.7;
+}
+
+.markdown-body.dark-mode {
+  color: #aaff32;
+}
+
+.markdown-body.dark-mode code {
+  color: #222;
+}
+
+.markdown-body.dark-mode pre code {
+  color: #222;
 }

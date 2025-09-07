@@ -1,9 +1,10 @@
 // markdown-loader.js
-// Loads external .md files into elements with [include-html]
+// Loads external .md files into elements with [include-md]
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[include-html]").forEach(el => {
-        const markdownFile = el.getAttribute("include-html");
+    document.querySelectorAll("[include-md]").forEach(el => {
+        const markdownFile = el.getAttribute("include-md");
+        console.log("Attempting to load Markdown file:", markdownFile);  // Debug log
 
         const insertMarkdown = (text) => {
             // Render Markdown with syntax highlighting
@@ -12,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         if (location.protocol === "file:") {
-            // Local file protocol handling
             const xhr = new XMLHttpRequest();
             xhr.open("GET", markdownFile, true);
             xhr.onreadystatechange = function() {
@@ -20,20 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (xhr.status === 0 || (xhr.status >= 200 && xhr.status < 300)) {
                         insertMarkdown(xhr.responseText);
                     } else {
+                        console.error(`XHR error: ${xhr.status} - ${xhr.statusText}`);
                         el.innerHTML = markdownFile + " - " + xhr.status + ": " + xhr.statusText;
                     }
                 }
             };
             xhr.send(null);
         } else {
-            // Standard fetch for http(s)
             fetch(markdownFile)
                 .then(response => {
-                    if (!response.ok) throw new Error(response.status + ": " + response.statusText);
+                    if (!response.ok) {
+                        throw new Error(response.status + ": " + response.statusText);
+                    }
                     return response.text();
                 })
                 .then(text => insertMarkdown(text))
-                .catch(err => el.innerHTML = markdownFile + " - " + err.message);
+                .catch(err => {
+                    console.error("Fetch error:", err);
+                    el.innerHTML = markdownFile + " - " + err.message;
+                });
         }
     });
 });

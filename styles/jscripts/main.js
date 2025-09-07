@@ -29,8 +29,14 @@ function darkmodeon() {
     element6[i].classList.toggle("dark-mode");
   }
   
-  let element7 = document.getElementById("theme")
-  element7.classList.toggle("dark-mode");
+  let element7 = document.getElementsByClassName("markdown-body")
+  var i;
+  for (i = 0; i < element7.length; i++) {
+    element7[i].classList.toggle("dark-mode");
+  }
+  
+  let element8 = document.getElementById("theme")
+  element8.classList.toggle("dark-mode");
 }
 
 function themeToggle() {
