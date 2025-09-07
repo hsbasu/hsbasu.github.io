@@ -1,78 +1,144 @@
-html { font-family: 'Open Sans', sans-serif; font-size: 100%; }
-*{ box-sizing: border-box; }
-body { background-color: #06c2ac; margin: 5px; text-align: justify; padding: 10px; }
+/* Base styles */
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #06c2ac;
+  margin: 5px;
+  text-align: justify;
+  padding: 10px;
+}
 
-.center { margin: 5px; text-align: center; }
+/* Centering utility */
+.center {
+  margin: 5px;
+  text-align: center;
+}
 
-/* Style the header */
-header { padding: 0.5%; }
-.center a:hover { margin: 0px; background-color: unset; }
-header #datetime { background-color: #fdf6e3; text-align: center; margin: 5px; padding: 2px; border-radius: 5px; }
+/* Header */
+header {
+  padding: 0.5%;
+}
+header #datetime {
+  background-color: #fdf6e3;
+  text-align: center;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 5px;
+}
 
-/* Style the navigation bar */
-nav { background-color: #7fff00; padding: 5px; width: 100%; border-radius: 10px; }
+/* Navigation bar */
+nav {
+  background-color: #7fff00;
+  padding: 5px;
+  width: 100%;
+  border-radius: 10px;
+}
+.bar {
+  overflow: visible;
+}
 
-.bar { overflow: visible; }
+/* Footer */
+footer {
+  background-color: #666666;
+  color: #7fff00;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+p.crights {
+  text-align: center;
+  margin: 10px 0;
+}
 
-/* Style the footer */
-footer { background-color: #666666; color: #7fff00; padding: 5px; margin: 5px; text-align: center; border-radius: 10px; }
+/* Layout sections */
+section {
+  margin: 10px auto;
+}
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-/* footer .w3-center { margin: 0px; min-width: 50%; } */
+/* Sidebar + articles */
+#newsbar {
+  background-color: #2c001e;
+  color: #7fff00;
+  width: 25%;
+  margin: 2px;
+  padding: 10px;
+  float: left;
+  border-radius: 10px;
+}
+#articles {
+  background-color: #f1f1f1;
+  width: 74%;
+  margin: 0 auto;
+  padding: 10px;
+  float: left;
+  border-radius: 10px;
+}
 
-/* Style the contents */
-section { margin: 10px auto; }
-section:after { content: ""; display: table; clear: both; }
-
-/* Create two columns/boxes that floats next to each other */
-#newsbar { background-color: #2c001e; color: #7fff00; width: 25%; margin: 2px; padding: 10px; float: left; border-radius: 10px; }
-#articles { background-color: #f1f1f1; width: 74%; margin: 0 auto; padding: 10px; float: left; border-radius: 10px; }
-
-/* Style floats */
+/* Floats */
 .w3-left { float: left; text-align: left; }
 .w3-right { float: right; text-align: right; }
 .w3-center { margin: 0 auto; width: 100%; text-align: center; }
 
-/* all links */
-a { margin: 0 auto; padding: 2px; text-decoration: none; }
-a:hover { opacity: 0.8; color: #000; background-color: #06c2ac; border-radius: 8px; padding: 2px; }
+/* Links */
+a {
+  margin: 0 auto;
+  padding: 2px;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+  color: #000;
+  background-color: #06c2ac;
+  border-radius: 8px;
+  padding: 2px;
+}
 
 /* Badges */
 .badges { text-align: center; }
 a.badges { margin-right: 5px; margin-bottom: 5px; }
-a.badges:hover { opacity: 1.0; background-color: unset; filter: brightness(80%); }
+a.badges:hover {
+  opacity: 1.0;
+  background-color: unset;
+  filter: brightness(80%);
+}
 
-/* all text, image and lists */
+/* Text & media */
 p, li { line-height: 150%; }
 li, ol, ul { margin-left: 1.5%; }
-/* scale=1 sends sticky navbar t0 back */
-img { margin: 5px; max-width: 90%; min-height: 24px; display: inline-block; }
+img {
+  margin: 5px;
+  max-width: 90%;
+  min-height: 24px;
+  display: inline-block;
+}
 video { max-width: 60%; display: inline-block; }
 
-/* social services at footer */
+/* Services icons */
 img.services { margin: 0px; }
-a.services { opacity: 0.5; padding: 0; display: inline-block; }
-a:hover.services { opacity: 1; background-color: unset; padding: 0 2px 2px 5px;}
-p.services { line-height: 0px; margin: 10px 0; text-align: center; }
-p.crights { text-align: center; margin: 10px 0; }
-
-/* Code snippets */
-pre code { background-color: #fdf6e3; color: #000; padding: 5px; border-radius: 5px; line-height: 200%; display: block; max-width: 100%; max-height: 300px; overflow: auto; }
-code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px; line-height: 200%; overflow: auto; }
-
-
-.line {
-  background: url("https://hsbasu.github.io/styles/icons/navigation/line.png") repeat-x;
-  opacity: 0.2;
-  padding: 10px 0;
-}
-
-.vline {
-  background: url("/home/himadri/Projects/project-mamolinux/Side_projects/my-repos/personal/hsbasu.github.io/styles/icons/navigation/vline.png") repeat-y;
+a.services {
   opacity: 0.5;
-  padding: 10px 0;
+  padding: 0;
+  display: inline-block;
 }
+a:hover.services {
+  opacity: 1;
+  background-color: unset;
+  padding: 0 2px 2px 5px;
+}
+p.services { line-height: 0px; margin: 10px 0; text-align: center; }
 
-/* Download buttons */
+/* Buttons */
 .buttn {
   color: #26091a;
   border: 1px solid #5d910b;
@@ -91,7 +157,7 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   background: linear-gradient(#8eb81f, #69a312);
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px 0px transparent;
 }
-.darkbtn{
+.darkbtn {
   background-color: #7fff00cc;
   color: #25003e;
   cursor: pointer;
@@ -100,19 +166,9 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   padding: 2px 6px;
   border-radius: 5px;
 }
-.darkbtn:hover{
-  opacity: 0.7;
-}
+.darkbtn:hover { opacity: 0.7; }
 
-/*List style*/
-.list-group .list-group-item {
-  background: transparent;
-}
-
-.list-group .list-group-item i {
-  margin-right: 5px;
-}
-
+/* Info box */
 .infobox {
   border: 2px solid  #527f0e;
   padding: 5px;
@@ -122,4 +178,37 @@ code { background-color: #fdf6e3; color: #000; padding: 2px; border-radius: 5px;
   justify-content: center;
   align-items: center;
   overflow: auto;
+}
+
+/* Markdown body (GitHub-like, blended) */
+.markdown-body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: transparent;  /* blend with site */
+  padding: 5px;
+}
+.markdown-body h1, .markdown-body h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+.markdown-body pre {
+  background-color: #fdf6e3;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+}
+.markdown-body code {
+  background-color: #fdf6e3;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+}
+
+/* Code highlighting from highlight.js will apply automatically */
+.markdown-body pre code {
+  display: block;
+  color: #222;
+  font-size: 0.95em;
+  line-height: 1.5;
 }

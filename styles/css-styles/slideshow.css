@@ -1,43 +1,87 @@
 
 /* Additional styles for the slideshow */
+/* Slideshow container */
 .slideshow-container {
-    padding: 2rem 0;
-    max-width: 80%;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
+  padding: 2rem 0;
+  max-width: 80%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.Slides {
-    display: none;
-    width: 100%;
+/* Hide slides by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px 20px; /* Added padding to create separation */
-    color: #26091a;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+/* Prev & Next buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px 20px; /* Added padding to create separation */
+  margin-top: -22px;
+  color: #26091a;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 3px;
+  user-select: none;
+  background-color: #007bff44; /* Adjusted color to match a bluish theme */
+  transition: background-color 0.3s ease;
+  z-index: 10;
 }
+
 
 .prev {
-    left: 10px; /* Adjust the left position for the previous button */
-    border-radius: 3px 0 0 3px;
+  left: 10px; /* Adjust the left position for the previous button */
+  /* border-radius: 3px 0 0 3px; */
 }
 
+/* Position the "next" button to the right */
 .next {
-    right: 10px; /* Adjust the right position for the next button */
-    border-radius: 0 3px 3px 0;
+  right: 10px; /* Adjust the right position for the next button */
+  /* border-radius: 3px 0 0 3px; */
 }
 
-.prev:hover, .next:hover {
-    background-color: #007bffcc; /* Adjusted color to match a bluish theme */
-    padding: 16px 20px; /* Added padding to create separation */
+/* On hover, add background */
+.prev:hover,
+.next:hover {
+  background-color: #007bffcc; /* Adjusted color to match a bluish theme */
+  padding: 16px 20px; /* Added padding to create separation */
+}
+
+/* Caption inside slideshow (above dots) */
+/* Caption below image */
+.caption {
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  background: rgba(0,128,0,0.4);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Dots row under the slideshow */
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
 }
