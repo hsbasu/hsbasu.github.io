@@ -5,10 +5,12 @@ body.dark-mode {
 
 #newsbar.dark-mode{
 	background-color: #25003e;
+	color: #aaff32;
 }
 
 #articles.dark-mode {
 	background-color: #26091a;
+	color: #aaff32;
 }
 
 #datetime.dark-mode {
