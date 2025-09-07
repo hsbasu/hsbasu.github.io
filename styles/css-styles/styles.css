@@ -114,6 +114,37 @@ a.badges:hover {
 }
 
 /* Text & media */
+/* Standardize heading styles for consistency */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 1em 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.875em;
+}
 p, li { line-height: 150%; }
 li, ol, ul { margin-left: 1.5%; }
 img {
