@@ -103,6 +103,9 @@ a:hover {
   border-radius: 8px;
   padding: 2px;
 }
+header a:hover {
+  background-color: unset;
+}
 
 /* Badges */
 .badges { text-align: center; }
@@ -167,16 +170,20 @@ p.services { line-height: 0px; margin: 10px 0; text-align: center; }
   background: linear-gradient(#8eb81f, #69a312);
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.2), 0px 1px 0px transparent;
 }
-.darkbtn {
+#theme {
   background-color: #7fff00cc;
   color: #25003e;
   cursor: pointer;
-  font-size: 20px;
+  border-radius: 99999px;
   border: none;
-  padding: 2px 6px;
-  border-radius: 5px;
 }
-.darkbtn:hover { opacity: 0.7; }
+#theme:hover { opacity: 0.7; }
+#theme i {
+  font-size: 24px;
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+}
 
 /* Info box */
 .infobox {

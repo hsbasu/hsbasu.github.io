@@ -1,14 +1,15 @@
 /**
- * Dynamically loads JavaScript or CSS files into the document head.
+ * Dynamically loads a JS or CSS file into a target element.
  * @param {string} path - URL of the file to load.
- * @param {string} type - Either "js" for scripts or "css" for stylesheets.
+ * @param {string} type - "js" or "css".
+ * @param {HTMLElement} targetElement - Where to inject (defaults to <head>).
  */
-function loadFile(path, type) {
+function loadFile(path, type, targetElement = document.getElementsByTagName("head")[0]) {
   let fileref;
 
   if (type === "js") {
     fileref = document.createElement("script");
-    fileref.async = false; // Ensure scripts are executed in order
+    fileref.async = false;  // Ensure execution order
     fileref.setAttribute("type", "text/javascript");
     fileref.setAttribute("src", path);
   } else if (type === "css") {
@@ -18,7 +19,7 @@ function loadFile(path, type) {
     fileref.setAttribute("href", path);
   }
 
-  document.getElementsByTagName("head")[0].appendChild(fileref);
+  targetElement.appendChild(fileref);
 }
 
 // Load core libraries first
@@ -41,7 +42,7 @@ loadFile("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/githu
 loadFile("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css", "css");
 loadFile("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/styles.css", "css");
-loadFile("https://hsbasu.github.io/styles/css-styles/dark-styles.css", "css");
+loadFile("https://hsbasu.github.io/styles/css-styles/darkmode.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/responsive_navbar.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/responsive_sections.css", "css");
 loadFile("https://hsbasu.github.io/styles/css-styles/slideshow.css", "css");

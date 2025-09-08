@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Research Outcomes</title>
     
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://hsbasu.github.io/styles/jscripts/head.js"></script>
   </head>
   
@@ -28,24 +27,32 @@
       <div class="article-content" id="articles">
         <h2>Electrokinetic Instability</h2>
         <div class="slideshow-container w3-center">
-          <div class="Slides fade">
+          <div class="mySlides fade">
             <img src="https://hsbasu.github.io/images/myworks/sigma_E300_posner.gif">
           </div>
-          <div class="Slides fade">
+          <div class="mySlides fade">
             <img src="https://hsbasu.github.io/images/myworks/sigma_E350_posner.gif">
           </div>
-          <div class="Slides fade">
+          <div class="mySlides fade">
             <img src="https://hsbasu.github.io/images/myworks/sigma_E380_posner.gif">
           </div>
-          <div class="Slides fade">
+          <div class="mySlides fade">
             <video controls>
               <source src="videos/sigma.mp4" type="video/mp4"> Your browser does not support HTML video.
             </video>
           </div>
           <!-- Manual slideshow buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
         </div>
+        <!-- Dots placed *outside* slideshow -->
+        <div class="dots-container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        
         <h2>Electrohydrodynamic Jet</h2>
           <video controls>
             <source src="videos/cone-jet.mp4" type="video/mp4"> Your browser does not support HTML video.
@@ -71,7 +78,6 @@
     </footer>
     <!-- End Footer -->
     
-    <div id="render_md"></div>
-    <script type="text/javascript" src="styles/jscripts/main.js"></script>
+    <script src="https://hsbasu.github.io/styles/jscripts/foot.js"></script>
   </body>
 </html>
