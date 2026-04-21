@@ -1,5 +1,6 @@
+// navbar.js
 $(function() {
-  $("#myTopnav").load("https://hsbasu.github.io/navbar.html");
+  $("#myTopnav").load("/navbar.html");
 });
 
 function topnavbar() {

@@ -1,3 +1,4 @@
+// header.js
 $(function() {
-  $("#header").load("https://hsbasu.github.io/header.html");
+  $("#header").load("/header.html");
 });

@@ -1,44 +1,44 @@
 // markdown-loader.js
 // Loads external .md files into elements with [include-md]
 
-document.addEventListener("DOMContentLoaded", () => {
+(function () {
+  function runMarkdownLoader() {
+    if (typeof md_html !== "function") {
+      console.error("md_html is not available.");
+      return;
+    }
+
     document.querySelectorAll("[include-md]").forEach(el => {
-        const markdownFile = el.getAttribute("include-md");
-        console.log("Attempting to load Markdown file:", markdownFile);  // Debug log
+      const markdownFile = el.getAttribute("include-md");
+      console.log("Attempting to load Markdown file:", markdownFile);
 
-        const insertMarkdown = (text) => {
-            // Render Markdown with syntax highlighting
-            const htmlContent = md_html(text);
-            el.innerHTML = `<article class="markdown-body">${htmlContent}</article>`;
-        };
+      fetch(markdownFile)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`${response.status}: ${response.statusText}`);
+          }
+          return response.text();
+        })
+        .then(text => {
+          const htmlContent = md_html(text);
+          el.innerHTML = `<article class="markdown-body">${htmlContent}</article>`;
 
-        if (location.protocol === "file:") {
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", markdownFile, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 0 || (xhr.status >= 200 && xhr.status < 300)) {
-                        insertMarkdown(xhr.responseText);
-                    } else {
-                        console.error(`XHR error: ${xhr.status} - ${xhr.statusText}`);
-                        el.innerHTML = markdownFile + " - " + xhr.status + ": " + xhr.statusText;
-                    }
-                }
-            };
-            xhr.send(null);
-        } else {
-            fetch(markdownFile)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(response.status + ": " + response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(text => insertMarkdown(text))
-                .catch(err => {
-                    console.error("Fetch error:", err);
-                    el.innerHTML = markdownFile + " - " + err.message;
-                });
-        }
+          if (window.hljs) {
+            el.querySelectorAll("pre code").forEach(block => {
+              hljs.highlightElement(block);
+            });
+          }
+        })
+        .catch(err => {
+          console.error("Fetch error:", err);
+          el.textContent = `${markdownFile} - ${err.message}`;
+        });
     });
-});
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", runMarkdownLoader);
+  } else {
+    runMarkdownLoader();
+  }
+})();
